@@ -232,8 +232,8 @@ export default function Home() {
                     From ₹800
                   </div>
                 </div>
-                <Button className="w-full touch-manipulation min-h-[44px]">
-                  Book This Service
+                <Button asChild className="w-full touch-manipulation min-h-[44px]">
+                  <Link href="/contact">Book This Service</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -272,8 +272,8 @@ export default function Home() {
                     From ₹1500
                   </div>
                 </div>
-                <Button className="w-full touch-manipulation min-h-[44px]">
-                  Book This Service
+                <Button asChild className="w-full touch-manipulation min-h-[44px]">
+                  <Link href="/contact">Book This Service</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -312,8 +312,8 @@ export default function Home() {
                     From ₹2500
                   </div>
                 </div>
-                <Button className="w-full touch-manipulation min-h-[44px]">
-                  Book This Service
+                <Button asChild className="w-full touch-manipulation min-h-[44px]">
+                  <Link href="/contact">Book This Service</Link>
                 </Button>
               </CardContent>
             </Card>

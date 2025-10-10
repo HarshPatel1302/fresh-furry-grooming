@@ -16,17 +16,27 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Fresh & Furry Pet Grooming",
-  description: "Professional pet grooming and spa services in Vashi, Navi Mumbai. Making your furry friends look and feel their best.",
+  description: "Professional pet grooming and spa services in Vashi & Nerul, Navi Mumbai. Making your furry friends look and feel their best.",
   keywords: [
     "pet grooming",
     "dog grooming",
     "cat grooming",
     "Vashi",
+    "Nerul",
     "Navi Mumbai",
     "pet spa",
     "professional grooming",
     "pet care"
   ],
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' }
+    ],
+    apple: { url: '/apple-touch-icon.png', sizes: '180x180' }
+  },
+  manifest: '/manifest.json',
+  themeColor: '#10B981',
 };
 
 export default function RootLayout({
@@ -36,12 +46,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#ffffff" />
-      </head>
                   <body
                     className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
                   >
