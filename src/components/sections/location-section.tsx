@@ -2,21 +2,22 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Phone, Mail, Navigation, Car } from "lucide-react";
-import { getSiteConfig } from "@/lib/content";
+import { getSiteConfig, getPrimaryBranch } from "@/lib/content";
 import { env } from "@/lib/env";
 
 export function LocationSection() {
   const siteConfig = getSiteConfig();
+  const primaryBranch = getPrimaryBranch();
 
   return (
     <section className="py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Visit Us in Vashi
+            Visit Us in Vashi & Nerul
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Conveniently located in the heart of Vashi, Navi Mumbai. 
+            Conveniently located in Vashi and Nerul, Navi Mumbai. 
             Easy parking and accessible by public transport.
           </p>
         </div>
@@ -62,7 +63,7 @@ export function LocationSection() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  {siteConfig.address}
+                  {primaryBranch.address}
                 </p>
                 
                 <div className="flex flex-wrap gap-2">
@@ -82,7 +83,7 @@ export function LocationSection() {
                     Operating Hours
                   </h4>
                   <div className="space-y-1">
-                    {Object.entries(siteConfig.hours).map(([day, hours]) => (
+                    {Object.entries(primaryBranch.hours).map(([day, hours]) => (
                       <div key={day} className="flex justify-between text-sm">
                         <span className="font-medium">{day}:</span>
                         <span className="text-muted-foreground">{hours}</span>
@@ -101,33 +102,33 @@ export function LocationSection() {
                 <div className="flex items-center gap-3">
                   <Phone className="h-4 w-4 text-primary" />
                   <a
-                    href={`tel:${siteConfig.phone}`}
+                    href={`tel:${primaryBranch.phone}`}
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    {siteConfig.phone}
+                    {primaryBranch.phone}
                   </a>
                 </div>
                 
                 <div className="flex items-center gap-3">
                   <Mail className="h-4 w-4 text-primary" />
                   <a
-                    href={`mailto:${siteConfig.email}`}
+                    href={`mailto:${primaryBranch.email}`}
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    {siteConfig.email}
+                    {primaryBranch.email}
                   </a>
                 </div>
 
                 <div className="flex gap-3 pt-4">
                   <Button asChild className="flex-1">
-                    <a href={`tel:${siteConfig.phone}`}>
+                    <a href={`tel:${primaryBranch.phone}`}>
                       <Phone className="h-4 w-4 mr-2" />
                       Call Now
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="flex-1">
                     <a 
-                      href={`https://wa.me/${siteConfig.phone.replace(/[^\d]/g, '')}`}
+                      href={`https://wa.me/${primaryBranch.phone.replace(/[^\d]/g, '')}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

@@ -7,9 +7,13 @@ import { PawPrint, Star, MapPin, Clock, Phone, Mail, CheckCircle, Menu, X } from
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { getSiteConfig, getPrimaryBranch, getAllBranches } from "@/lib/content";
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const siteConfig = getSiteConfig();
+  const primaryBranch = getPrimaryBranch();
+  const allBranches = getAllBranches();
 
   return (
     <div className="min-h-screen">
@@ -341,7 +345,7 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-green-600" />
                   <div>
-                    <p className="font-semibold">+91 9136474141</p>
+                    <p className="font-semibold">{primaryBranch.phone}</p>
                     <p className="text-sm text-gray-600">Call us directly</p>
                   </div>
                 </div>
@@ -349,7 +353,7 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-green-600" />
                   <div>
-                    <p className="font-semibold">hello@freshandfurry.com</p>
+                    <p className="font-semibold">{primaryBranch.email}</p>
                     <p className="text-sm text-gray-600">Email us anytime</p>
                   </div>
                 </div>
@@ -357,16 +361,16 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-green-600" />
                   <div>
-                    <p className="font-semibold">Vashi, Navi Mumbai</p>
-                    <p className="text-sm text-gray-600">Shop No. 5, Sector 17</p>
+                    <p className="font-semibold">Vashi & Nerul, Navi Mumbai</p>
+                    <p className="text-sm text-gray-600">Two convenient locations</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-green-600" />
                   <div>
-                    <p className="font-semibold">Tuesday - Sunday: 11:00 AM - 7:00 PM</p>
-                    <p className="text-sm text-gray-600">Monday: Closed</p>
+                    <p className="font-semibold">{primaryBranch.hours["Tuesday - Sunday"]}</p>
+                    <p className="text-sm text-gray-600">{primaryBranch.hours["Monday"]}</p>
                   </div>
                 </div>
 
@@ -393,7 +397,7 @@ export default function Home() {
                 <span className="text-xl font-bold">Fresh & Furry</span>
               </div>
               <p className="text-gray-400 mb-4">
-                Professional pet grooming services in Vashi, Navi Mumbai. 
+                Professional pet grooming services in Vashi & Nerul, Navi Mumbai. 
                 Making your furry friends look and feel their best.
               </p>
               <div className="flex items-center gap-2">
@@ -442,15 +446,15 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-gray-400">
                 <li className="flex items-center gap-2">
                   <MapPin className="h-4 w-4" />
-                  Vashi, Navi Mumbai
+                  Vashi & Nerul, Navi Mumbai
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  +91 9136474141
+                  {primaryBranch.phone} (Vashi)
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  hello@freshandfurry.com
+                  {primaryBranch.email}
                 </li>
                 <li className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />

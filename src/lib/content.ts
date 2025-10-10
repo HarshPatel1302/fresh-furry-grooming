@@ -1,21 +1,32 @@
 // Simple content management without external dependencies
 
 // Basic types for content
+export type BranchInfo = {
+  name: string;
+  address: string;
+  phone: string;
+  whatsapp: string;
+  email: string;
+  hours: {
+    [key: string]: string;
+  };
+  googleMapsUrl: string;
+  isPrimary: boolean;
+};
+
 export type SiteConfig = {
   name: string;
   tagline: string;
-  address: string;
-  phone: string;
-  email: string;
-  hours: {
-    mondayToFriday: string;
-    saturday: string;
-    sunday: string;
+  owner: string;
+  branches: {
+    vashi: BranchInfo;
+    nerul: BranchInfo;
   };
   socials: {
     instagram?: string;
     facebook?: string;
     twitter?: string;
+    youtube?: string;
   };
 };
 
@@ -91,17 +102,41 @@ export type FAQItem = {
 function getDefaultSiteConfig(): SiteConfig {
   return {
     name: "Fresh & Furry Pet Grooming",
-    tagline: "Professional pet grooming and spa services in Vashi, Navi Mumbai.",
-    address: "Shop No. 5, Sector 17, Vashi, Navi Mumbai, Maharashtra 400703",
-    phone: "+91 9136474141",
-    email: "hello@freshandfurry.com",
-    hours: {
-      mondayToFriday: "Closed on Monday, Tuesday-Friday: 11:00 AM - 7:00 PM",
-      saturday: "11:00 AM - 7:00 PM",
-      sunday: "11:00 AM - 7:00 PM"
+    tagline: "Professional Pet Grooming & Spa Services in Vashi & Nerul",
+    owner: "Vaibhavi Desai",
+    branches: {
+      vashi: {
+        name: "Fresh & Furry Pet Grooming - Vashi",
+        address: "Shop No. 5, Sector 17, Vashi, Navi Mumbai - 400703",
+        phone: "+91 9136474141",
+        whatsapp: "+91 9136474141",
+        email: "vashi@freshandfurry.com",
+        hours: {
+          "Monday": "Closed",
+          "Tuesday - Sunday": "11:00 AM - 7:00 PM"
+        },
+        googleMapsUrl: "https://maps.google.com/?q=Vashi+Sector+17+Fresh+and+Furry",
+        isPrimary: true
+      },
+      nerul: {
+        name: "Fresh & Furry Pet Grooming - Nerul",
+        address: "Shop No. 12, Sector 19, Nerul, Navi Mumbai - 400706",
+        phone: "+91 9876543210",
+        whatsapp: "+91 9876543210",
+        email: "nerul@freshandfurry.com",
+        hours: {
+          "Monday": "Closed",
+          "Tuesday - Friday": "10:00 AM - 8:00 PM",
+          "Saturday - Sunday": "9:00 AM - 9:00 PM"
+        },
+        googleMapsUrl: "https://maps.google.com/?q=Nerul+Sector+19+Fresh+and+Furry",
+        isPrimary: false
+      }
     },
     socials: {
       instagram: "https://www.instagram.com/freshandfurryspa?igsh=MThtYmg3cGt3MTl0NA==",
+      facebook: "https://facebook.com/freshandfurry",
+      youtube: "https://youtube.com/@freshandfurry"
     },
   };
 }
@@ -193,13 +228,68 @@ function getDefaultGallery(): GalleryItem[] {
     {
       id: "gallery-1",
       type: "image",
-      url: "/placeholders/before-after-1.svg",
+      url: "https://images.unsplash.com/photo-1551717743-49959800b1f6?w=800&h=600&fit=crop",
+      title: "Professional Dog Grooming",
+      description: "Expert grooming services for dogs of all breeds and sizes",
+      species: "dog",
+      category: "grooming",
+      date: "2024-01-15",
+      tags: ["professional", "dog-grooming", "expert"]
+    },
+    {
+      id: "gallery-2",
+      type: "image",
+      url: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&h=600&fit=crop",
+      title: "Cat Grooming Specialist",
+      description: "Gentle and stress-free grooming for our feline friends",
+      species: "cat",
+      category: "grooming",
+      date: "2024-01-14",
+      tags: ["cat-grooming", "gentle", "stress-free"]
+    },
+    {
+      id: "gallery-3",
+      type: "image",
+      url: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&h=600&fit=crop",
       title: "Before & After Transformation",
-      description: "Amazing transformation of a Golden Retriever",
+      description: "Amazing transformation of a Golden Retriever after professional grooming",
       species: "dog",
       category: "before-after",
-      date: "2024-01-15",
-      tags: ["transformation", "golden retriever", "grooming"]
+      date: "2024-01-13",
+      tags: ["before-after", "transformation", "golden-retriever"]
+    },
+    {
+      id: "gallery-4",
+      type: "image",
+      url: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&h=600&fit=crop",
+      title: "Happy Groomed Dog",
+      description: "A satisfied client after their spa treatment",
+      species: "dog",
+      category: "grooming",
+      date: "2024-01-12",
+      tags: ["happy", "satisfied", "spa-treatment"]
+    },
+    {
+      id: "gallery-5",
+      type: "image",
+      url: "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=800&h=600&fit=crop",
+      title: "Cat Bath Time",
+      description: "Professional cat bathing with specialized techniques",
+      species: "cat",
+      category: "grooming",
+      date: "2024-01-11",
+      tags: ["cat-bath", "specialized", "professional"]
+    },
+    {
+      id: "gallery-6",
+      type: "image",
+      url: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&h=600&fit=crop",
+      title: "Dog Spa Treatment",
+      description: "Luxury spa treatment for ultimate pet pampering",
+      species: "dog",
+      category: "spa",
+      date: "2024-01-10",
+      tags: ["spa-treatment", "luxury", "pampering"]
     }
   ];
 }
@@ -254,4 +344,20 @@ export function getFAQ(): FAQItem[] {
 
 export function getFAQByCategory(category: string): FAQItem[] {
   return getDefaultFAQ().filter(item => item.category === category);
+}
+
+// Branch helper functions
+export function getPrimaryBranch(): BranchInfo {
+  const config = getDefaultSiteConfig();
+  return config.branches.vashi; // Vashi is the primary branch
+}
+
+export function getBranch(branchId: 'vashi' | 'nerul'): BranchInfo {
+  const config = getDefaultSiteConfig();
+  return config.branches[branchId];
+}
+
+export function getAllBranches(): BranchInfo[] {
+  const config = getDefaultSiteConfig();
+  return [config.branches.vashi, config.branches.nerul];
 }

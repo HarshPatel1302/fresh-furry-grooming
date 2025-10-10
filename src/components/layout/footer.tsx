@@ -2,12 +2,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { PawPrint, MapPin, Clock, Phone, Mail, Instagram, Facebook } from "lucide-react";
-import { getSiteConfig } from "@/lib/content";
-import { env } from "@/lib/env";
+import { getSiteConfig, getPrimaryBranch } from "@/lib/content";
 
 export function Footer() {
   const siteConfig = getSiteConfig();
-  const whatsappNumber = env.WHATSAPP_NUMBER;
+  const primaryBranch = getPrimaryBranch();
 
   const quickLinks = [
     { name: "Services", href: "/services" },
@@ -39,7 +38,7 @@ export function Footer() {
               <span className="font-bold text-xl">Fresh & Furry</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Professional pet grooming and spa services in Vashi. Making your furry friends look and feel their best.
+              Professional pet grooming and spa services in Vashi & Nerul. Making your furry friends look and feel their best.
             </p>
             <div className="flex space-x-4">
               {siteConfig.socials.instagram && (
@@ -106,13 +105,13 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 mt-0.5 text-muted-foreground" />
                 <p className="text-sm text-muted-foreground">
-                  {siteConfig.address}
+                  {primaryBranch.address}
                 </p>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="h-4 w-4 text-muted-foreground" />
                 <div className="text-sm text-muted-foreground">
-                  {Object.entries(siteConfig.hours).map(([day, hours]) => (
+                  {Object.entries(primaryBranch.hours).map(([day, hours]) => (
                     <div key={day}>
                       <span className="font-medium">{day}:</span> {hours}
                     </div>
@@ -122,19 +121,19 @@ export function Footer() {
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-muted-foreground" />
                 <a
-                  href={`tel:${siteConfig.phone}`}
+                  href={`tel:${primaryBranch.phone}`}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {siteConfig.phone}
+                  {primaryBranch.phone}
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-muted-foreground" />
                 <a
-                  href={`mailto:${siteConfig.email}`}
+                  href={`mailto:${primaryBranch.email}`}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {siteConfig.email}
+                  {primaryBranch.email}
                 </a>
               </div>
             </div>
