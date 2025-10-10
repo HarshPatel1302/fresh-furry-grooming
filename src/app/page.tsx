@@ -341,7 +341,7 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-green-600" />
                   <div>
-                    <p className="font-semibold">+91-98765-43210</p>
+                    <p className="font-semibold">+91 9136474141</p>
                     <p className="text-sm text-gray-600">Call us directly</p>
                   </div>
                 </div>
@@ -365,8 +365,8 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-green-600" />
                   <div>
-                    <p className="font-semibold">Monday - Friday: 9:00 AM - 7:00 PM</p>
-                    <p className="text-sm text-gray-600">Saturday: 9:00 AM - 6:00 PM</p>
+                    <p className="font-semibold">Tuesday - Sunday: 11:00 AM - 7:00 PM</p>
+                    <p className="text-sm text-gray-600">Monday: Closed</p>
                   </div>
                 </div>
 
@@ -446,7 +446,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  +91-98765-43210
+                  +91 9136474141
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
@@ -454,7 +454,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />
-                  Mon-Fri: 9AM-7PM
+                  Tue-Sun: 11AM-7PM (Mon Closed)
                 </li>
               </ul>
             </div>
