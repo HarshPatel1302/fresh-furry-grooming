@@ -33,7 +33,7 @@ export function WhyChooseUsSection() {
             Why Choose Fresh & Furry?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We're committed to providing the best possible care for your beloved pets 
+            We&apos;re committed to providing the best possible care for your beloved pets 
             with a focus on safety, comfort, and exceptional results.
           </p>
         </div>

@@ -4,7 +4,7 @@ export const siteConfigSchema = z.object({
   name: z.string(),
   tagline: z.string(),
   address: z.string(),
-  hours: z.record(z.string()),
+  hours: z.record(z.string(), z.string()),
   contacts: z.object({
     phone: z.string(),
     whatsapp: z.string(),

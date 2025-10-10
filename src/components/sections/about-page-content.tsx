@@ -249,17 +249,10 @@ export function AboutPageContent() {
                   
                   {member.socials && (
                     <div className="flex gap-2">
-                      {member.socials.instagram && (
+                      {member.socials?.instagram && (
                         <Button asChild variant="outline" size="sm">
                           <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer">
                             <Instagram className="h-4 w-4" />
-                          </a>
-                        </Button>
-                      )}
-                      {member.socials.facebook && (
-                        <Button asChild variant="outline" size="sm">
-                          <a href={member.socials.facebook} target="_blank" rel="noopener noreferrer">
-                            <Facebook className="h-4 w-4" />
                           </a>
                         </Button>
                       )}

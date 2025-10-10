@@ -123,13 +123,11 @@ export const pricingSchema = z.object({
 // Booking Form Schema
 export const bookingFormSchema = z.object({
   petName: z.string().min(1, "Pet name is required"),
-  petType: z.enum(['dog', 'cat'], {
-    required_error: "Please select pet type",
+  petType: z.enum(['dog', 'cat']).refine(val => val === 'dog' || val === 'cat', {
+    message: "Please select pet type",
   }),
   breed: z.string().min(1, "Breed is required"),
-  size: z.enum(['small', 'medium', 'large', 'extra-large'], {
-    required_error: "Please select pet size",
-  }),
+  size: z.enum(['small', 'medium', 'large', 'extra-large']),
   age: z.string().min(1, "Age is required"),
   service: z.string().min(1, "Service is required"),
   preferredDate: z.string().min(1, "Preferred date is required"),

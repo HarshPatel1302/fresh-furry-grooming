@@ -27,52 +27,22 @@ export function FeaturedSection() {
             {featured.map((item) => (
               <Card key={item.id} className="overflow-hidden hover:shadow-lg transition-shadow group">
                 <div className="relative aspect-square">
-                  {item.type === 'video' ? (
-                    <div className="relative w-full h-full">
-                      <video
-                        className="w-full h-full object-cover"
-                        muted
-                        loop
-                        playsInline
-                      >
-                        <source src={item.url} type="video/mp4" />
-                      </video>
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <Play className="h-12 w-12 text-white/80 group-hover:text-white transition-colors" />
-                      </div>
-                    </div>
-                  ) : (
-                    <Image
-                      src={item.url}
-                      alt={item.title || "Featured content"}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  )}
+                  <Image
+                    src={item.image}
+                    alt={item.title || "Featured content"}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                   
-                  {/* Type Badge */}
+                  {/* Category Badge */}
                   <Badge 
                     className="absolute top-3 left-3"
-                    variant={item.type === 'video' ? 'default' : 'secondary'}
+                    variant="secondary"
                   >
-                    {item.type === 'video' ? (
-                      <Play className="h-3 w-3 mr-1" />
-                    ) : (
-                      <ImageIcon className="h-3 w-3 mr-1" />
-                    )}
-                    {item.type === 'video' ? 'Video' : 'Photo'}
+                    <ImageIcon className="h-3 w-3 mr-1" />
+                    {item.category}
                   </Badge>
 
-                  {/* Species Badge */}
-                  {item.species && (
-                    <Badge 
-                      className="absolute top-3 right-3"
-                      variant="outline"
-                    >
-                      {item.species === 'dog' ? '🐕' : item.species === 'cat' ? '🐱' : '🐾'}
-                    </Badge>
-                  )}
                 </div>
 
                 <CardContent className="p-4">
@@ -89,9 +59,9 @@ export function FeaturedSection() {
                   <div className="flex items-center justify-between text-xs text-muted-foreground">
                     <div className="flex items-center gap-1">
                       <Calendar className="h-3 w-3" />
-                      {new Date(item.date).toLocaleDateString()}
+                      Featured
                     </div>
-                    <span className="capitalize">{item.species || 'pet'}</span>
+                    <span className="capitalize">{item.category}</span>
                   </div>
                 </CardContent>
               </Card>

@@ -101,33 +101,33 @@ export function LocationSection() {
                 <div className="flex items-center gap-3">
                   <Phone className="h-4 w-4 text-primary" />
                   <a
-                    href={`tel:${siteConfig.contacts.phone}`}
+                    href={`tel:${siteConfig.phone}`}
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    {siteConfig.contacts.phone}
+                    {siteConfig.phone}
                   </a>
                 </div>
                 
                 <div className="flex items-center gap-3">
                   <Mail className="h-4 w-4 text-primary" />
                   <a
-                    href={`mailto:${siteConfig.contacts.email}`}
+                    href={`mailto:${siteConfig.email}`}
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    {siteConfig.contacts.email}
+                    {siteConfig.email}
                   </a>
                 </div>
 
                 <div className="flex gap-3 pt-4">
                   <Button asChild className="flex-1">
-                    <a href={`tel:${siteConfig.contacts.phone}`}>
+                    <a href={`tel:${siteConfig.phone}`}>
                       <Phone className="h-4 w-4 mr-2" />
                       Call Now
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="flex-1">
                     <a 
-                      href={`https://wa.me/${siteConfig.contacts.whatsapp.replace(/[^\d]/g, '')}`}
+                      href={`https://wa.me/${siteConfig.phone.replace(/[^\d]/g, '')}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

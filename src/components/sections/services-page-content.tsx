@@ -9,6 +9,19 @@ import { Dog, Cat, Sparkles, Clock, IndianRupee, CheckCircle, Shield, Zap, Crown
 import Link from "next/link";
 import Image from "next/image";
 
+// Service data type
+type ServiceData = {
+  id: string;
+  title: string;
+  description: string;
+  duration: string;
+  fromPrice: string;
+  species: string;
+  category: string;
+  popular?: boolean;
+  bullets: string[];
+};
+
 // Comprehensive service data
 const serviceData = {
   dog: [
@@ -267,7 +280,7 @@ export function ServicesPageContent() {
   const catServices = serviceData.cat;
   const allServices = [...serviceData.dog, ...serviceData.cat, ...serviceData.both];
 
-  const renderServiceCard = (service: any) => (
+  const renderServiceCard = (service: ServiceData) => (
     <Card key={service.id} className="h-full hover:shadow-lg transition-all duration-300 group relative overflow-hidden">
       {service.popular && (
         <Badge className="absolute top-4 right-4 bg-yellow-500 text-black z-10 animate-pulse">

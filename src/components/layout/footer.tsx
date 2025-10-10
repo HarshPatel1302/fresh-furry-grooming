@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { PawPrint, MapPin, Clock, Phone, Mail, Instagram, Facebook, Youtube } from "lucide-react";
+import { PawPrint, MapPin, Clock, Phone, Mail, Instagram, Facebook } from "lucide-react";
 import { getSiteConfig } from "@/lib/content";
 import { env } from "@/lib/env";
 
@@ -60,16 +60,6 @@ export function Footer() {
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Facebook className="h-5 w-5" />
-                </a>
-              )}
-              {siteConfig.socials.youtube && (
-                <a
-                  href={siteConfig.socials.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Youtube className="h-5 w-5" />
                 </a>
               )}
             </div>
@@ -132,19 +122,19 @@ export function Footer() {
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-muted-foreground" />
                 <a
-                  href={`tel:${siteConfig.contacts.phone}`}
+                  href={`tel:${siteConfig.phone}`}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {siteConfig.contacts.phone}
+                  {siteConfig.phone}
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-muted-foreground" />
                 <a
-                  href={`mailto:${siteConfig.contacts.email}`}
+                  href={`mailto:${siteConfig.email}`}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {siteConfig.contacts.email}
+                  {siteConfig.email}
                 </a>
               </div>
             </div>

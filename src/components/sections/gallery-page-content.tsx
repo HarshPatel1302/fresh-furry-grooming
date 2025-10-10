@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Dog, Cat, Play, Image as ImageIcon, Calendar, Filter } from "lucide-react";
 import Image from "next/image";
+import { GalleryItem } from "@/lib/content";
 
 // Sample gallery data
 const galleryData = [
@@ -123,7 +124,7 @@ const categories = [
 export function GalleryPageContent() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedSpecies, setSelectedSpecies] = useState("both");
-  const [selectedItem, setSelectedItem] = useState<any>(null);
+  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
   const filteredItems = galleryData.filter(item => {
     const categoryMatch = selectedCategory === "all" || item.category === selectedCategory;

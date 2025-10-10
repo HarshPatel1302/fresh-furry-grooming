@@ -1,13 +1,13 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Dog, Cat, Sparkles, Clock, IndianRupee } from "lucide-react";
+import { Dog, Cat, Sparkles, Clock, IndianRupee, PawPrint } from "lucide-react";
 import Link from "next/link";
 import { getServices } from "@/lib/content";
 
 export function ServicesSection() {
   const services = getServices();
-  const popularServices = services.filter(service => service.popular).slice(0, 6);
+  const popularServices = services.slice(0, 6);
 
   return (
     <section className="py-16 bg-muted/30">
@@ -40,26 +40,11 @@ export function ServicesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {popularServices.map((service) => (
             <Card key={service.id} className="relative overflow-hidden hover:shadow-lg transition-shadow">
-              {service.popular && (
-                <Badge className="absolute top-4 right-4 bg-yellow-500 text-black">
-                  <Sparkles className="h-3 w-3 mr-1" />
-                  Popular
-                </Badge>
-              )}
               
               <CardHeader>
                 <div className="flex items-center gap-3 mb-2">
-                  {service.species === 'dog' ? (
-                    <Dog className="h-5 w-5 text-blue-600" />
-                  ) : service.species === 'cat' ? (
-                    <Cat className="h-5 w-5 text-purple-600" />
-                  ) : (
-                    <div className="flex gap-1">
-                      <Dog className="h-4 w-4 text-blue-600" />
-                      <Cat className="h-4 w-4 text-purple-600" />
-                    </div>
-                  )}
-                  <CardTitle className="text-lg">{service.title}</CardTitle>
+                  <PawPrint className="h-5 w-5 text-green-600" />
+                  <CardTitle className="text-lg">{service.name}</CardTitle>
                 </div>
                 <CardDescription className="text-sm">
                   {service.description}
@@ -68,15 +53,15 @@ export function ServicesSection() {
               
               <CardContent>
                 <ul className="space-y-2 mb-4">
-                  {service.bullets.slice(0, 3).map((bullet, index) => (
+                  {service.features.slice(0, 3).map((bullet, index) => (
                     <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
                       <div className="w-1 h-1 bg-primary rounded-full" />
                       {bullet}
                     </li>
                   ))}
-                  {service.bullets.length > 3 && (
+                  {service.features.length > 3 && (
                     <li className="text-xs text-muted-foreground">
-                      +{service.bullets.length - 3} more services
+                      +{service.features.length - 3} more services
                     </li>
                   )}
                 </ul>
@@ -88,7 +73,7 @@ export function ServicesSection() {
                   </div>
                   <div className="flex items-center gap-1 font-semibold text-lg">
                     <IndianRupee className="h-4 w-4" />
-                    {service.fromPrice}
+                    {service.price}
                   </div>
                 </div>
                 

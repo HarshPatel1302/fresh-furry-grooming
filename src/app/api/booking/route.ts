@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
             <p><strong>Service:</strong> ${validatedData.service}</p>
             <p><strong>Preferred Date:</strong> ${validatedData.preferredDate}</p>
             <p><strong>Preferred Time:</strong> ${validatedData.preferredTime}</p>
-            ${validatedData.notes ? `<p><strong>Notes:</strong> ${validatedData.notes}</p>` : ""}
+            ${validatedData.message ? `<p><strong>Message:</strong> ${validatedData.message}</p>` : ""}
             <p><strong>Submitted:</strong> ${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })}</p>
           `,
         };

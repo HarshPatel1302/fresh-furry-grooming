@@ -70,7 +70,7 @@ export function TestimonialsSection() {
             What Our Clients Say
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what pet parents have to say 
+            Don&apos;t just take our word for it. Here&apos;s what pet parents have to say 
             about their experience with Fresh & Furry.
           </p>
         </div>
@@ -93,27 +93,26 @@ export function TestimonialsSection() {
                       </div>
 
                       <blockquote className="text-lg text-muted-foreground mb-6 italic">
-                        "{testimonial.text}"
+                        &quot;{testimonial.review}&quot;
                       </blockquote>
 
                       <div className="flex items-center justify-center gap-4 mb-4">
                         <div>
-                          <h4 className="font-semibold">{testimonial.name}</h4>
+                          <h4 className="font-semibold">{testimonial.customerName}</h4>
                           {testimonial.petName && (
                             <p className="text-sm text-muted-foreground">
                               Pet Parent of {testimonial.petName}
                             </p>
                           )}
-                          {testimonial.service && (
+                          {testimonial.services && testimonial.services.length > 0 && (
                             <p className="text-sm text-primary">
-                              Service: {testimonial.service}
+                              Service: {testimonial.services[0]}
                             </p>
                           )}
                         </div>
                       </div>
 
                       <div className="flex items-center justify-center gap-2">
-                        {getSourceBadge(testimonial.source)}
                         <span className="text-xs text-muted-foreground">
                           {new Date(testimonial.date).toLocaleDateString()}
                         </span>
