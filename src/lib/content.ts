@@ -93,12 +93,12 @@ function getDefaultSiteConfig(): SiteConfig {
     name: "Fresh & Furry Pet Grooming",
     tagline: "Professional pet grooming and spa services in Vashi, Navi Mumbai.",
     address: "Shop No. 5, Sector 17, Vashi, Navi Mumbai, Maharashtra 400703",
-    phone: "+919876543210",
+    phone: "+91 9136474141",
     email: "hello@freshandfurry.com",
     hours: {
-      mondayToFriday: "9:00 AM - 7:00 PM",
-      saturday: "9:00 AM - 6:00 PM",
-      sunday: "Closed"
+      mondayToFriday: "Closed on Monday, Tuesday-Friday: 11:00 AM - 7:00 PM",
+      saturday: "11:00 AM - 7:00 PM",
+      sunday: "11:00 AM - 7:00 PM"
     },
     socials: {
       instagram: "https://www.instagram.com/freshandfurryspa?igsh=MThtYmg3cGt3MTl0NA==",
@@ -144,11 +144,11 @@ function getDefaultServices(): Service[] {
 function getDefaultStaff(): StaffMember[] {
   return [
     {
-      id: "priya-sharma",
-      name: "Priya Sharma",
+      id: "vaibhavi-desai",
+      name: "Vaibhavi Desai",
       role: "Head Groomer & Owner",
-      photo: "/placeholders/staff-priya.svg",
-      bio: "With over 8 years of experience in pet grooming, Priya founded Fresh & Furry with a vision to provide compassionate, professional grooming services.",
+      photo: "/placeholders/staff-vaibhavi.svg",
+      bio: "With over 8 years of experience in pet grooming, Vaibhavi founded Fresh & Furry with a vision to provide compassionate, professional grooming services.",
       experience: "8+ years",
       specialties: ["Breed-specific cuts", "Anxiety management", "Senior pet care", "Show dog preparation"],
       socials: {
