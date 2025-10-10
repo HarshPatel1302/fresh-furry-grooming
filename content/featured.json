@@ -1,0 +1,29 @@
+[
+  {
+    "id": "featured-1",
+    "type": "video",
+    "url": "/placeholders/hero-video.mp4",
+    "title": "Today's Happy Clients",
+    "description": "See our furry friends enjoying their spa day!",
+    "species": "both",
+    "date": "2024-01-15"
+  },
+  {
+    "id": "featured-2",
+    "type": "image",
+    "url": "/placeholders/staff-priya.jpg",
+    "title": "Meet Priya - Our Head Groomer",
+    "description": "8+ years of experience in professional pet grooming",
+    "species": "both",
+    "date": "2024-01-15"
+  },
+  {
+    "id": "featured-3",
+    "type": "video",
+    "url": "/placeholders/daily-grooming.mp4",
+    "title": "Behind the Scenes",
+    "description": "A day in the life at Fresh & Furry",
+    "species": "both",
+    "date": "2024-01-14"
+  }
+]

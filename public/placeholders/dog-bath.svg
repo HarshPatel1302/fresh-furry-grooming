@@ -1,0 +1,9 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#e6f3ff"/>
+  <circle cx="200" cy="180" r="80" fill="#cce6ff"/>
+  <ellipse cx="200" cy="280" rx="100" ry="60" fill="#b3d9ff"/>
+  <circle cx="180" cy="160" r="8" fill="#333"/>
+  <circle cx="220" cy="160" r="8" fill="#333"/>
+  <ellipse cx="200" cy="190" rx="15" ry="8" fill="#333"/>
+  <text x="200" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Dog Bath</text>
+</svg>

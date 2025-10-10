@@ -1,0 +1,74 @@
+[
+  {
+    "id": "faq-1",
+    "question": "How long does a typical grooming session take?",
+    "answer": "Grooming duration varies by service and pet size. A basic bath and blow dry takes 60-90 minutes, while a full groom can take 2-3 hours for larger dogs. Cats typically require 90-120 minutes for a full groom. We'll give you an estimated time when you book your appointment.",
+    "category": "services"
+  },
+  {
+    "id": "faq-2",
+    "question": "Is it safe to groom my pet?",
+    "answer": "Absolutely! Our certified groomers are trained in pet safety and use only pet-safe, cruelty-free products. We follow strict hygiene protocols and have experience with pets of all temperaments. We take special care with anxious or senior pets.",
+    "category": "safety"
+  },
+  {
+    "id": "faq-3",
+    "question": "What products do you use?",
+    "answer": "We use only premium, cruelty-free, and pet-safe grooming products from trusted brands. Our shampoos and conditioners are pH-balanced for pets and free from harsh chemicals. We can accommodate special requests for sensitive pets.",
+    "category": "services"
+  },
+  {
+    "id": "faq-4",
+    "question": "Do you require vaccination records?",
+    "answer": "Yes, we require proof of current vaccinations (Rabies, DHPP for dogs, FVRCP for cats) for the safety of all pets. Please bring vaccination records or ensure your vet has sent them to us before your appointment.",
+    "category": "safety"
+  },
+  {
+    "id": "faq-5",
+    "question": "What age can puppies and kittens start grooming?",
+    "answer": "We recommend starting grooming at 12-16 weeks old for both puppies and kittens. We offer special introduction sessions that focus on positive experiences and basic grooming techniques to help young pets become comfortable with the process.",
+    "category": "general"
+  },
+  {
+    "id": "faq-6",
+    "question": "How often should I get my pet groomed?",
+    "answer": "Grooming frequency depends on breed, coat type, and lifestyle. Most dogs benefit from grooming every 4-6 weeks, while cats typically need grooming every 6-8 weeks. Long-haired breeds may need more frequent visits. We can recommend a schedule during your first visit.",
+    "category": "general"
+  },
+  {
+    "id": "faq-7",
+    "question": "What should I do if it's my pet's first time grooming?",
+    "answer": "Let us know it's their first visit when booking. We'll schedule extra time and use gentle introduction techniques. Bring treats, favorite toys, or anything that comforts your pet. We'll work at your pet's pace to ensure a positive experience.",
+    "category": "general"
+  },
+  {
+    "id": "faq-8",
+    "question": "Can I cancel or reschedule my appointment?",
+    "answer": "Yes, you can cancel or reschedule up to 24 hours before your appointment without any charges. Cancellations within 24 hours may incur a 50% fee. Please call us as soon as possible if you need to make changes.",
+    "category": "booking"
+  },
+  {
+    "id": "faq-9",
+    "question": "Do you offer grooming for aggressive or anxious pets?",
+    "answer": "Yes, we have experience with pets of all temperaments. Our groomers are trained in gentle handling techniques and can work with anxious or aggressive pets. We may recommend shorter sessions or sedation (with vet approval) for extremely stressed pets.",
+    "category": "safety"
+  },
+  {
+    "id": "faq-10",
+    "question": "How should I care for my pet after grooming?",
+    "answer": "Keep your pet warm and dry for 24 hours after grooming. Avoid vigorous play or swimming. Brush regularly to maintain the groom. If you notice any skin irritation or unusual behavior, contact us immediately. We provide detailed aftercare instructions with each service.",
+    "category": "general"
+  },
+  {
+    "id": "faq-11",
+    "question": "Do you provide pick-up and drop-off services?",
+    "answer": "Currently, we don't offer pick-up and drop-off services. However, we're located conveniently in Vashi with ample parking. We're happy to recommend local pet transport services if needed.",
+    "category": "services"
+  },
+  {
+    "id": "faq-12",
+    "question": "What if my pet gets injured during grooming?",
+    "answer": "While rare, accidents can happen. We have first aid supplies and protocols in place. For any injuries, we'll provide immediate care and contact you and your veterinarian if needed. We're fully insured and take full responsibility for any incidents.",
+    "category": "safety"
+  }
+]

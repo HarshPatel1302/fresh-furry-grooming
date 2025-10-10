@@ -1,0 +1,101 @@
+[
+  {
+    "id": "gallery-1",
+    "type": "image",
+    "url": "/placeholders/staff-priya.jpg",
+    "title": "Professional Grooming in Action",
+    "description": "Our head groomer Priya working on a beautiful Golden Retriever",
+    "species": "dog",
+    "category": "grooming",
+    "date": "2024-01-15",
+    "tags": ["professional", "golden-retriever", "grooming"]
+  },
+  {
+    "id": "gallery-2",
+    "type": "video",
+    "url": "/placeholders/grooming-process.mp4",
+    "title": "Complete Grooming Process",
+    "description": "Watch our step-by-step grooming process",
+    "species": "both",
+    "category": "grooming",
+    "date": "2024-01-14",
+    "tags": ["process", "step-by-step", "professional"]
+  },
+  {
+    "id": "gallery-3",
+    "type": "image",
+    "url": "/placeholders/staff-rahul.jpg",
+    "title": "Large Breed Specialist",
+    "description": "Rahul specializing in large breed grooming",
+    "species": "dog",
+    "category": "staff",
+    "date": "2024-01-13",
+    "tags": ["staff", "large-breed", "specialist"]
+  },
+  {
+    "id": "gallery-4",
+    "type": "image",
+    "url": "/placeholders/staff-sneha.jpg",
+    "title": "Cat Grooming Expert",
+    "description": "Sneha our cat specialist at work",
+    "species": "cat",
+    "category": "staff",
+    "date": "2024-01-12",
+    "tags": ["cat-specialist", "expert", "feline"]
+  },
+  {
+    "id": "gallery-5",
+    "type": "video",
+    "url": "/placeholders/daily-grooming.mp4",
+    "title": "Daily Grooming Routine",
+    "description": "A typical day at Fresh & Furry",
+    "species": "both",
+    "category": "facility",
+    "date": "2024-01-11",
+    "tags": ["daily", "routine", "facility"]
+  },
+  {
+    "id": "gallery-6",
+    "type": "image",
+    "url": "/placeholders/staff-priya.jpg",
+    "title": "Before & After Transformation",
+    "description": "Amazing transformation after our spa treatment",
+    "species": "dog",
+    "category": "before-after",
+    "date": "2024-01-10",
+    "tags": ["before-after", "transformation", "spa"]
+  },
+  {
+    "id": "gallery-7",
+    "type": "image",
+    "url": "/placeholders/staff-rahul.jpg",
+    "title": "Happy Client",
+    "description": "One of our satisfied canine clients",
+    "species": "dog",
+    "category": "grooming",
+    "date": "2024-01-09",
+    "tags": ["happy", "client", "satisfied"]
+  },
+  {
+    "id": "gallery-8",
+    "type": "image",
+    "url": "/placeholders/staff-sneha.jpg",
+    "title": "Cat Spa Treatment",
+    "description": "Gentle spa treatment for our feline friends",
+    "species": "cat",
+    "category": "spa",
+    "date": "2024-01-08",
+    "tags": ["spa", "gentle", "feline"]
+  },
+  {
+    "id": "gallery-9",
+    "type": "video",
+    "url": "/placeholders/hero-video.mp4",
+    "title": "Welcome to Fresh & Furry",
+    "description": "Take a tour of our grooming facility",
+    "species": "both",
+    "category": "facility",
+    "date": "2024-01-07",
+    "tags": ["welcome", "facility", "tour"]
+  }
+]

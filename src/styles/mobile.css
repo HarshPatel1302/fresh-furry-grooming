@@ -1,0 +1,146 @@
+/* Mobile-specific optimizations for Fresh & Furry */
+
+/* Improve touch targets for mobile devices */
+@media (max-width: 768px) {
+  /* Ensure all interactive elements meet minimum touch target size */
+  button, 
+  a, 
+  input, 
+  select, 
+  textarea,
+  [role="button"],
+  [role="link"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve form input touch targets */
+  input, 
+  select, 
+  textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px 16px;
+  }
+  
+  /* Better spacing for mobile navigation */
+  .mobile-nav-item {
+    padding: 12px 16px;
+    margin: 4px 0;
+  }
+  
+  /* Improve card interactions on mobile */
+  .service-card {
+    margin-bottom: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Better button spacing */
+  .mobile-button {
+    margin: 8px 0;
+    padding: 12px 24px;
+  }
+  
+  /* Improve text readability on mobile */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Better heading sizes for mobile */
+  h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  /* Improve grid layouts for mobile */
+  .mobile-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  /* Better spacing for sections */
+  section {
+    padding: 2rem 1rem;
+  }
+  
+  /* Improve modal and overlay interactions */
+  .modal-overlay {
+    touch-action: manipulation;
+  }
+  
+  /* Better scrolling on mobile */
+  .scroll-container {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+}
+
+/* Tablet-specific optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .tablet-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .service-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* High DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Ensure crisp rendering on high DPI displays */
+  .logo,
+  .icon {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Dark mode support for mobile */
+@media (prefers-color-scheme: dark) {
+  .mobile-nav-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .service-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles for mobile */
+@media print {
+  .mobile-nav,
+  .mobile-button,
+  .no-print {
+    display: none !important;
+  }
+  
+  .service-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}

@@ -1,0 +1,11 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#fff0e6"/>
+  <ellipse cx="200" cy="180" rx="70" ry="60" fill="#ffe6cc"/>
+  <ellipse cx="200" cy="280" rx="90" ry="70" fill="#ffd9b3"/>
+  <circle cx="180" cy="160" r="6" fill="#333"/>
+  <circle cx="220" cy="160" r="6" fill="#333"/>
+  <ellipse cx="200" cy="185" rx="12" ry="6" fill="#333"/>
+  <polygon points="160,140 140,120 120,140" fill="#ffe6cc"/>
+  <polygon points="240,140 260,120 280,140" fill="#ffe6cc"/>
+  <text x="200" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Cat Grooming</text>
+</svg>

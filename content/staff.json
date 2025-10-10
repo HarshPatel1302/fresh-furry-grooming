@@ -1,0 +1,50 @@
+[
+  {
+    "id": "priya-sharma",
+    "name": "Priya Sharma",
+    "role": "Head Groomer & Owner",
+    "photo": "/placeholders/staff-priya.jpg",
+    "bio": "With over 8 years of experience in pet grooming, Priya founded Fresh & Furry with a vision to provide compassionate, professional grooming services. She specializes in breed-specific cuts and has a gentle approach that makes even the most anxious pets feel comfortable.",
+    "experience": "8+ years",
+    "specialties": [
+      "Breed-specific cuts",
+      "Anxiety management",
+      "Senior pet care",
+      "Show dog preparation"
+    ],
+    "socials": {
+      "instagram": "https://instagram.com/priya_groomer"
+    }
+  },
+  {
+    "id": "rahul-patel",
+    "name": "Rahul Patel",
+    "role": "Senior Groomer",
+    "photo": "/placeholders/staff-rahul.jpg",
+    "bio": "Rahul brings 5 years of expertise in dog grooming and is particularly skilled with large breeds. His calm demeanor and patient approach make him a favorite among our canine clients. He's also our go-to person for nail trimming and ear cleaning.",
+    "experience": "5+ years",
+    "specialties": [
+      "Large breed grooming",
+      "Nail care specialist",
+      "Ear cleaning expert",
+      "Deshedding treatments"
+    ]
+  },
+  {
+    "id": "sneha-desai",
+    "name": "Sneha Desai",
+    "role": "Cat Specialist & Groomer",
+    "photo": "/placeholders/staff-sneha.jpg",
+    "bio": "Sneha is our resident cat whisperer with 4 years of specialized feline grooming experience. She understands the unique needs of cats and uses stress-free techniques to ensure a positive grooming experience for our feline friends.",
+    "experience": "4+ years",
+    "specialties": [
+      "Cat grooming specialist",
+      "Stress-free techniques",
+      "Long-haired cat care",
+      "Feline behavior expert"
+    ],
+    "socials": {
+      "instagram": "https://instagram.com/sneha_catgroomer"
+    }
+  }
+]
