@@ -10,11 +10,9 @@ export function Footer() {
 
   const quickLinks = [
     { name: "Services", href: "/services" },
-    { name: "Pricing", href: "/pricing" },
     { name: "Gallery", href: "/gallery" },
     { name: "About", href: "/about" },
     { name: "Reviews", href: "/reviews" },
-    { name: "FAQ", href: "/faq" },
   ];
 
   const services = [

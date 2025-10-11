@@ -30,19 +30,12 @@ export default function Home() {
             <div className="hidden md:flex items-center gap-6">
               <Link href="/" className="text-gray-700 hover:text-green-600 font-medium transition-colors">Home</Link>
               <Link href="/services" className="text-gray-700 hover:text-green-600 font-medium transition-colors">Services</Link>
-              <Link href="/pricing" className="text-gray-700 hover:text-green-600 font-medium transition-colors">Pricing</Link>
               <Link href="/gallery" className="text-gray-700 hover:text-green-600 font-medium transition-colors">Gallery</Link>
               <Link href="/reviews" className="text-gray-700 hover:text-green-600 font-medium transition-colors">Reviews</Link>
               <Link href="/about" className="text-gray-700 hover:text-green-600 font-medium transition-colors">About</Link>
-              <Link href="/faq" className="text-gray-700 hover:text-green-600 font-medium transition-colors">FAQ</Link>
-              <Link href="/contact" className="text-gray-700 hover:text-green-600 font-medium transition-colors">Contact</Link>
             </div>
 
             <div className="flex items-center gap-4">
-              <Button asChild size="sm" className="hidden sm:flex">
-                <Link href="/contact">Book Now</Link>
-              </Button>
-              
                           {/* Mobile Menu Button */}
                           <Button
                             variant="ghost"
@@ -75,13 +68,6 @@ export default function Home() {
                               Services
                             </Link>
                             <Link 
-                              href="/pricing" 
-                              className="block px-3 py-3 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-md font-medium transition-colors touch-manipulation min-h-[44px] flex items-center"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              Pricing
-                            </Link>
-                            <Link 
                               href="/gallery" 
                               className="block px-3 py-3 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-md font-medium transition-colors touch-manipulation min-h-[44px] flex items-center"
                               onClick={() => setIsMobileMenuOpen(false)}
@@ -102,27 +88,6 @@ export default function Home() {
                             >
                               About
                             </Link>
-                            <Link 
-                              href="/faq" 
-                              className="block px-3 py-3 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-md font-medium transition-colors touch-manipulation min-h-[44px] flex items-center"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              FAQ
-                            </Link>
-                            <Link 
-                              href="/contact" 
-                              className="block px-3 py-3 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-md font-medium transition-colors touch-manipulation min-h-[44px] flex items-center"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              Contact
-                            </Link>
-                <div className="px-3 py-2">
-                  <Button asChild size="sm" className="w-full">
-                    <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                      Book Now
-                    </Link>
-                  </Button>
-                </div>
               </div>
             </div>
           )}
