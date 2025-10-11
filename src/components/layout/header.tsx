@@ -9,11 +9,9 @@ import { cn } from "@/lib/utils";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
-  { name: "Pricing", href: "/pricing" },
   { name: "Gallery", href: "/gallery" },
   { name: "About", href: "/about" },
   { name: "Reviews", href: "/reviews" },
-  { name: "FAQ", href: "/faq" },
 ];
 
 export function Header() {
@@ -44,12 +42,8 @@ export function Header() {
             ))}
           </nav>
 
-          {/* CTA Button & Mobile Menu */}
+          {/* Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <Button asChild className="hidden sm:inline-flex">
-              <Link href="/contact">Book Now</Link>
-            </Button>
-
             {/* Mobile menu button */}
             <Button
               variant="ghost"
@@ -83,11 +77,6 @@ export function Header() {
                   {item.name}
                 </Link>
               ))}
-              <div className="px-3 py-2">
-                <Button asChild className="w-full">
-                  <Link href="/contact">Book Now</Link>
-                </Button>
-              </div>
             </div>
           </div>
         )}
