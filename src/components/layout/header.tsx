@@ -42,8 +42,12 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Mobile Menu */}
+          {/* CTA Button & Mobile Menu */}
           <div className="flex items-center space-x-4">
+            <Button asChild className="hidden sm:inline-flex">
+              <Link href="/contact">Book Now</Link>
+            </Button>
+
             {/* Mobile menu button */}
             <Button
               variant="ghost"
@@ -77,6 +81,11 @@ export function Header() {
                   {item.name}
                 </Link>
               ))}
+              <div className="px-3 py-2">
+                <Button asChild className="w-full">
+                  <Link href="/contact">Book Now</Link>
+                </Button>
+              </div>
             </div>
           </div>
         )}

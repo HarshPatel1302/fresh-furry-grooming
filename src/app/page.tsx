@@ -36,6 +36,10 @@ export default function Home() {
             </div>
 
             <div className="flex items-center gap-4">
+              <Button asChild size="sm" className="hidden sm:flex">
+                <Link href="/contact">Book Now</Link>
+              </Button>
+              
                           {/* Mobile Menu Button */}
                           <Button
                             variant="ghost"
@@ -88,6 +92,13 @@ export default function Home() {
                             >
                               About
                             </Link>
+                <div className="px-3 py-2">
+                  <Button asChild size="sm" className="w-full">
+                    <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                      Book Now
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
           )}
