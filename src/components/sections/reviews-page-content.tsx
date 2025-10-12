@@ -392,36 +392,6 @@ export function ReviewsPageContent() {
           </Card>
         </div>
 
-        {/* Review Guidelines */}
-        <div className="mt-16">
-          <Card className="max-w-4xl mx-auto">
-            <CardHeader>
-              <CardTitle>Review Guidelines</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="font-semibold mb-3">We Value Your Feedback</h3>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Share your honest experience with our services</li>
-                    <li>• Mention specific services you received</li>
-                    <li>• Help other pet owners make informed decisions</li>
-                    <li>• Photos of your pet are always welcome!</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-3">How to Leave a Review</h3>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Visit our Google Business profile</li>
-                    <li>• Rate us on Facebook</li>
-                    <li>• Tag us on Instagram @freshandfurryspa</li>
-                    <li>• Email us your feedback</li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </div>
   );

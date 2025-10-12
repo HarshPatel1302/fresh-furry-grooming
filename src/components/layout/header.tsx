@@ -3,12 +3,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Menu, X, PawPrint } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
+  { name: "Prices", href: "/pricing" },
   { name: "Gallery", href: "/gallery" },
   { name: "About", href: "/about" },
   { name: "Reviews", href: "/reviews" },
@@ -23,32 +25,37 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
-              <PawPrint className="h-5 w-5" />
-            </div>
-            <span className="font-bold text-xl">Fresh & Furry</span>
+            <Image
+              src="/logo.svg"
+              alt="Fresh & Furry The Ethical Pet Spa"
+              width={120}
+              height={60}
+              className="h-8 w-auto"
+              priority
+            />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
+          {/* Right Side - Desktop Navigation & Mobile Menu */}
+          <div className="flex items-center">
+            {/* Desktop Navigation & CTA Button */}
+            <div className="hidden md:flex items-center space-x-6">
+              <nav className="flex items-center space-x-6">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </nav>
+              <Button asChild>
+                <Link href="/contact">Book Now</Link>
+              </Button>
+            </div>
 
-          {/* CTA Button & Mobile Menu */}
-          <div className="flex items-center space-x-4">
-            <Button asChild className="hidden sm:inline-flex">
-              <Link href="/contact">Book Now</Link>
-            </Button>
-
-            {/* Mobile menu button */}
+            {/* Mobile Menu Button */}
             <Button
               variant="ghost"
               size="icon"

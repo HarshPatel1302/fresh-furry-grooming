@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { BookingForm } from "@/components/forms/booking-form";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Clock, Phone, Mail, MessageCircle, Star, Instagram } from "lucide-react";
+import { MapPin, Clock, Phone, Mail, MessageCircle, Instagram } from "lucide-react";
 import Link from "next/link";
 import { getSiteConfig, getAllBranches } from "@/lib/content";
 
@@ -176,38 +176,6 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            {/* Reviews Card */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Star className="h-5 w-5 text-yellow-500 fill-current" />
-                  Customer Reviews
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
-                    ))}
-                  </div>
-                  <span className="font-medium">4.9/5</span>
-                  <span className="text-muted-foreground">(127+ reviews)</span>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  "Excellent service! My dog looks amazing after his grooming session. 
-                  The staff is very professional and caring." - Rajesh K.
-                </p>
-                <div className="mt-3">
-                  <Link 
-                    href="/reviews" 
-                    className="text-green-600 hover:text-green-700 text-sm font-medium"
-                  >
-                    Read all reviews →
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
 

@@ -1,0 +1,67 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="200" fill="black"/>
+  
+  <!-- Green Branch -->
+  <path d="M 50 40 Q 60 50 70 60 Q 80 70 90 80 Q 100 90 110 100" 
+        stroke="#22c55e" stroke-width="3" fill="none"/>
+  
+  <!-- Branch Leaves -->
+  <ellipse cx="55" cy="45" rx="8" ry="4" fill="#22c55e" transform="rotate(-30 55 45)"/>
+  <ellipse cx="65" cy="55" rx="8" ry="4" fill="#22c55e" transform="rotate(-20 65 55)"/>
+  <ellipse cx="75" cy="65" rx="8" ry="4" fill="#22c55e" transform="rotate(-10 75 65)"/>
+  <ellipse cx="85" cy="75" rx="8" ry="4" fill="#22c55e" transform="rotate(0 85 75)"/>
+  <ellipse cx="95" cy="85" rx="8" ry="4" fill="#22c55e" transform="rotate(10 95 85)"/>
+  <ellipse cx="105" cy="95" rx="8" ry="4" fill="#22c55e" transform="rotate(20 105 95)"/>
+  
+  <!-- Arched Line -->
+  <path d="M 40 45 Q 200 25 360 45" 
+        stroke="#666666" stroke-width="2" fill="none"/>
+  
+  <!-- Cat Silhouette -->
+  <g transform="translate(180, 70)">
+    <!-- Cat Body -->
+    <ellipse cx="0" cy="10" rx="25" ry="15" fill="black"/>
+    <!-- Cat Head -->
+    <circle cx="0" cy="-5" r="18" fill="black"/>
+    <!-- Cat Ears -->
+    <polygon points="0,-20 -8,-8 8,-8" fill="black"/>
+    <polygon points="0,-20 8,-8 16,-8" fill="black"/>
+    <!-- Cat Eyes -->
+    <circle cx="-6" cy="-8" r="3" fill="white"/>
+    <circle cx="6" cy="-8" r="3" fill="white"/>
+    <!-- Cat Tail -->
+    <path d="M 25 10 Q 40 0 45 15" stroke="black" stroke-width="8" stroke-linecap="round" fill="none"/>
+  </g>
+  
+  <!-- Dog Silhouette -->
+  <g transform="translate(240, 70)">
+    <!-- Dog Body -->
+    <ellipse cx="0" cy="10" rx="25" ry="15" fill="#d97706"/>
+    <!-- Dog Head -->
+    <circle cx="0" cy="-5" r="18" fill="#d97706"/>
+    <!-- Dog Ears -->
+    <ellipse cx="-8" cy="-8" rx="6" ry="12" fill="#d97706" transform="rotate(-20 -8 -8)"/>
+    <ellipse cx="8" cy="-8" rx="6" ry="12" fill="#d97706" transform="rotate(20 8 -8)"/>
+    <!-- Dog Eyes -->
+    <circle cx="-6" cy="-8" r="3" fill="white"/>
+    <circle cx="6" cy="-8" r="3" fill="white"/>
+    <!-- Dog Tail -->
+    <path d="M -25 10 Q -40 0 -45 15" stroke="#d97706" stroke-width="8" stroke-linecap="round" fill="none"/>
+  </g>
+  
+  <!-- Horizontal Line -->
+  <line x1="40" y1="115" x2="360" y2="115" stroke="#666666" stroke-width="2"/>
+  
+  <!-- Brand Name -->
+  <text x="200" y="150" font-family="serif" font-size="32" font-weight="bold" 
+        text-anchor="middle" fill="#666666">FRESH &amp; FURRY</text>
+  
+  <!-- Tagline -->
+  <text x="200" y="175" font-family="sans-serif" font-size="14" font-weight="normal" 
+        text-anchor="middle" fill="#666666">THE ETHICAL PET SPA</text>
+  
+  <!-- Tagline Decorative Lines -->
+  <line x1="120" y1="170" x2="140" y2="170" stroke="#666666" stroke-width="1"/>
+  <line x1="260" y1="170" x2="280" y2="170" stroke="#666666" stroke-width="1"/>
+</svg>

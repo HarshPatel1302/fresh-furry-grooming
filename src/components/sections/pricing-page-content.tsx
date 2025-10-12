@@ -289,21 +289,6 @@ export function PricingPageContent() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <h2 className="text-2xl font-bold mb-4">Ready to Book?</h2>
-          <p className="text-muted-foreground mb-6">
-            Contact us for a personalized quote based on your pet's specific needs
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg">
-              Get Personalized Quote
-            </Button>
-            <Button size="lg" variant="outline">
-              Book Appointment
-            </Button>
-          </div>
-        </div>
       </div>
     </div>
   );

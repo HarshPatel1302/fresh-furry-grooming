@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { PawPrint, MapPin, Clock, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import { MapPin, Clock, Phone, Mail, Instagram, Facebook } from "lucide-react";
 import { getSiteConfig, getPrimaryBranch } from "@/lib/content";
+import { CONTACT_PHONES } from "@/lib/contact";
+import Image from "next/image";
 
 export function Footer() {
   const siteConfig = getSiteConfig();
@@ -30,10 +31,13 @@ export function Footer() {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                <PawPrint className="h-5 w-5" />
-              </div>
-              <span className="font-bold text-xl">Fresh & Furry</span>
+              <Image
+                src="/logo.svg"
+                alt="Fresh & Furry The Ethical Pet Spa"
+                width={120}
+                height={60}
+                className="h-8 w-auto"
+              />
             </div>
             <p className="text-sm text-muted-foreground">
               Professional pet grooming and spa services in Vashi & Nerul. Making your furry friends look and feel their best.
@@ -116,14 +120,26 @@ export function Footer() {
                   ))}
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-muted-foreground" />
-                <a
-                  href={`tel:${primaryBranch.phone}`}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {primaryBranch.phone}
-                </a>
+              <div className="flex items-start space-x-3">
+                <Phone className="h-4 w-4 mt-0.5 text-muted-foreground" />
+                <div className="text-sm text-muted-foreground space-y-1">
+                  <div>
+                    Vashi: <a
+                      href={`tel:${CONTACT_PHONES.vashi}`}
+                      className="hover:text-foreground transition-colors"
+                    >
+                      {CONTACT_PHONES.vashi}
+                    </a>
+                  </div>
+                  <div>
+                    Nerul: <a
+                      href={`tel:${CONTACT_PHONES.nerul}`}
+                      className="hover:text-foreground transition-colors"
+                    >
+                      {CONTACT_PHONES.nerul}
+                    </a>
+                  </div>
+                </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-muted-foreground" />

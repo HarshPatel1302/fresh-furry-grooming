@@ -7,13 +7,12 @@ import { PawPrint, Star, MapPin, Clock, Phone, Mail, CheckCircle, Menu, X } from
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { getSiteConfig, getPrimaryBranch, getAllBranches } from "@/lib/content";
+import { getPrimaryBranch } from "@/lib/content";
+import { CONTACT_PHONES } from "@/lib/contact";
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const siteConfig = getSiteConfig();
   const primaryBranch = getPrimaryBranch();
-  const allBranches = getAllBranches();
 
   return (
     <div className="min-h-screen">
@@ -22,23 +21,30 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
-              <PawPrint className="h-8 w-8 text-green-600" />
-              <span className="text-xl font-bold text-gray-900">Fresh & Furry</span>
+              <Image
+                src="/logo.svg"
+                alt="Fresh & Furry The Ethical Pet Spa"
+                width={120}
+                height={60}
+                className="h-8 w-auto"
+                priority
+              />
             </div>
             
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation & CTA Button */}
             <div className="hidden md:flex items-center gap-6">
               <Link href="/" className="text-gray-700 hover:text-green-600 font-medium transition-colors">Home</Link>
               <Link href="/services" className="text-gray-700 hover:text-green-600 font-medium transition-colors">Services</Link>
+              <Link href="/pricing" className="text-gray-700 hover:text-green-600 font-medium transition-colors">Prices</Link>
               <Link href="/gallery" className="text-gray-700 hover:text-green-600 font-medium transition-colors">Gallery</Link>
               <Link href="/reviews" className="text-gray-700 hover:text-green-600 font-medium transition-colors">Reviews</Link>
               <Link href="/about" className="text-gray-700 hover:text-green-600 font-medium transition-colors">About</Link>
+              <Button asChild size="sm">
+                <Link href="/contact">Book Now</Link>
+              </Button>
             </div>
 
             <div className="flex items-center gap-4">
-              <Button asChild size="sm" className="hidden sm:flex">
-                <Link href="/contact">Book Now</Link>
-              </Button>
               
                           {/* Mobile Menu Button */}
                           <Button
@@ -70,6 +76,13 @@ export default function Home() {
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               Services
+                            </Link>
+                            <Link 
+                              href="/pricing" 
+                              className="block px-3 py-3 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-md font-medium transition-colors touch-manipulation min-h-[44px] flex items-center"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              Prices
                             </Link>
                             <Link 
                               href="/gallery" 
@@ -113,6 +126,18 @@ export default function Home() {
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
+            {/* Logo */}
+            <div className="mb-8 flex justify-center">
+              <Image
+                src="/logo.svg"
+                alt="Fresh & Furry The Ethical Pet Spa"
+                width={300}
+                height={150}
+                className="h-32 w-auto sm:h-36 md:h-40"
+                priority
+              />
+            </div>
+            
             <Badge variant="secondary" className="mb-6 bg-white/20 text-gray-800 border-white/30">
               <Star className="h-3 w-3 mr-1" />
               Vashi's #1 Pet Grooming Service
@@ -297,71 +322,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-16 bg-gray-50 touch-pan-x touch-pan-y">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Ready to Book?
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Contact us today to schedule your pet's grooming appointment
-            </p>
-          </div>
-
-          <div className="max-w-2xl mx-auto">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-center">Get in Touch</CardTitle>
-                <CardDescription className="text-center">
-                  We'll get back to you within 24 hours
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-green-600" />
-                  <div>
-                    <p className="font-semibold">{primaryBranch.phone}</p>
-                    <p className="text-sm text-gray-600">Call us directly</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-green-600" />
-                  <div>
-                    <p className="font-semibold">{primaryBranch.email}</p>
-                    <p className="text-sm text-gray-600">Email us anytime</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-green-600" />
-                  <div>
-                    <p className="font-semibold">Vashi & Nerul, Navi Mumbai</p>
-                    <p className="text-sm text-gray-600">Two convenient locations</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <Clock className="h-5 w-5 text-green-600" />
-                  <div>
-                    <p className="font-semibold">{primaryBranch.hours["Tuesday - Sunday"]}</p>
-                    <p className="text-sm text-gray-600">{primaryBranch.hours["Monday"]}</p>
-                  </div>
-                </div>
-
-                <div className="pt-4">
-                <Button asChild size="lg" className="w-full touch-manipulation min-h-[48px]">
-                  <Link href="/contact">
-                    Book Your Appointment
-                  </Link>
-                </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
@@ -369,8 +329,13 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <PawPrint className="h-8 w-8 text-green-400" />
-                <span className="text-xl font-bold">Fresh & Furry</span>
+                <Image
+                  src="/logo.svg"
+                  alt="Fresh & Furry The Ethical Pet Spa"
+                  width={120}
+                  height={60}
+                  className="h-8 w-auto"
+                />
               </div>
               <p className="text-gray-400 mb-4">
                 Professional pet grooming services in Vashi & Nerul, Navi Mumbai. 
@@ -424,9 +389,12 @@ export default function Home() {
                   <MapPin className="h-4 w-4" />
                   Vashi & Nerul, Navi Mumbai
                 </li>
-                <li className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  {primaryBranch.phone} (Vashi)
+                <li className="flex items-start gap-2">
+                  <Phone className="h-4 w-4 mt-0.5" />
+                  <div className="space-y-1">
+                    <div>Vashi: {CONTACT_PHONES.vashi}</div>
+                    <div>Nerul: {CONTACT_PHONES.nerul}</div>
+                  </div>
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />

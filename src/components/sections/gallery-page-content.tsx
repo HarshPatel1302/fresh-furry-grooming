@@ -331,16 +331,6 @@ export function GalleryPageContent() {
           </div>
         )}
 
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <h2 className="text-2xl font-bold mb-4">Ready to Book Your Pet's Session?</h2>
-          <p className="text-muted-foreground mb-6">
-            Join our happy customers and give your pet the grooming they deserve
-          </p>
-          <Button size="lg">
-            Book Appointment Now
-          </Button>
-        </div>
       </div>
     </div>
   );
