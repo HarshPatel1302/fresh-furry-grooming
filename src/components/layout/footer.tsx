@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
-import { MapPin, Clock, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import { MapPin, Clock, Phone, Mail, Instagram } from "lucide-react";
 import { getSiteConfig, getPrimaryBranch } from "@/lib/content";
 import { CONTACT_PHONES } from "@/lib/contact";
 import Image from "next/image";
@@ -52,16 +52,6 @@ export function Footer() {
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Instagram className="h-5 w-5" />
-                </a>
-              )}
-              {siteConfig.socials.facebook && (
-                <a
-                  href={siteConfig.socials.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Facebook className="h-5 w-5" />
                 </a>
               )}
             </div>
