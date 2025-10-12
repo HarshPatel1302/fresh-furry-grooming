@@ -41,6 +41,15 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  
+  /* New design tokens */
+  --color-paper: #EAF7EA;
+  --color-accent-purple: #7E57C2;
+  --color-accent-purple-700: #6A4FB3;
+  --color-floral-ink: #0F3D1E;
+  --color-text-base: #1E293B;
+  --shadow-paper: 0 6px 20px rgba(16,24,40,0.08);
+  --radius-paper: 16px;
 }
 
 :root {
@@ -118,5 +127,93 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Design tokens */
+:root {
+  --paper-bg: #EAF7EA;
+  --accent-purple: #7E57C2;
+  --accent-purple-700: #6A4FB3;
+  --floral-ink: #0F3D1E;
+  --text-base: #1E293B;
+}
+
+body { 
+  color: var(--text-base); 
+}
+
+/* Paper surface — apply to existing container classes via :is() without editing markup */
+:is([data-slot="card"], .container, main, section, .card, .panel, .box, .content, .prose, .paper, .surface) {
+  background: var(--paper-bg);
+  border: 3px solid var(--accent-purple);
+  border-radius: 16px;
+  box-shadow: var(--shadow-paper, 0 6px 20px rgba(16,24,40,0.08));
+  position: relative;
+}
+
+/* Floral top-left */
+:is([data-slot="card"], .container, main, section, .card, .panel, .box, .content, .prose, .paper, .surface)::before {
+  content: "";
+  position: absolute;
+  top: -6px; 
+  left: -6px;
+  width: 96px; 
+  height: 96px;
+  background: url("/assets/floral-corner.svg") no-repeat 0 0 / contain;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Links/buttons accent */
+a, button { 
+  outline-color: var(--accent-purple); 
+}
+a:hover { 
+  color: var(--accent-purple-700); 
+}
+
+/* Ensure text contrast on paper background */
+:is([data-slot="card"], .container, main, section, .card, .panel, .box, .content, .prose, .paper, .surface) {
+  color: var(--text-base);
+}
+
+/* Ensure headings and important text have good contrast */
+:is([data-slot="card"], .container, main, section, .card, .panel, .box, .content, .prose, .paper, .surface) h1,
+:is([data-slot="card"], .container, main, section, .card, .panel, .box, .content, .prose, .paper, .surface) h2,
+:is([data-slot="card"], .container, main, section, .card, .panel, .box, .content, .prose, .paper, .surface) h3,
+:is([data-slot="card"], .container, main, section, .card, .panel, .box, .content, .prose, .paper, .surface) h4,
+:is([data-slot="card"], .container, main, section, .card, .panel, .box, .content, .prose, .paper, .surface) h5,
+:is([data-slot="card"], .container, main, section, .card, .panel, .box, .content, .prose, .paper, .surface) h6 {
+  color: var(--text-base);
+  font-weight: 600;
+}
+
+/* Pet micro-interactions (opt-in via class only; does not change markup if unused) */
+@keyframes wag {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(8deg); }
+  50% { transform: rotate(-6deg); }
+}
+
+@keyframes boop {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1px); }
+}
+
+.pet-wag:hover { 
+  animation: wag 600ms ease-in-out; 
+  transform-origin: 70% 70%; 
+}
+
+.pet-boop:hover { 
+  animation: boop 180ms ease-out; 
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .pet-wag:hover, .pet-boop:hover { 
+    animation: none !important; 
   }
 }

@@ -31,13 +31,14 @@ export function Footer() {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Image
-                src="/logo.svg"
-                alt="Fresh & Furry The Ethical Pet Spa"
-                width={120}
-                height={60}
-                className="h-8 w-auto"
-              />
+            <Image
+  src="/fresh&furry.png"  // or .png, .webp, etc.
+  alt="Fresh & Furry The Ethical Pet Spa"
+  width={120}
+  height={60}
+  className="h-16 w-auto"
+  priority
+/>
             </div>
             <p className="text-sm text-muted-foreground">
               Professional pet grooming and spa services in Vashi & Nerul. Making your furry friends look and feel their best.
@@ -156,23 +157,9 @@ export function Footer() {
 
         <Separator className="my-8" />
 
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="flex justify-center items-center">
           <div className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Fresh & Furry Pet Grooming. All rights reserved.
-          </div>
-          <div className="flex space-x-6">
-            <Link
-              href="/privacy"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Terms of Service
-            </Link>
           </div>
         </div>
       </div>

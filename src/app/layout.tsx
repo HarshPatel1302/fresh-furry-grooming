@@ -54,7 +54,7 @@ export default function RootLayout({
         <LocalBusinessJSONLD
           name="Fresh & Furry Pet Grooming"
           description="Professional pet grooming services in Vashi, Navi Mumbai. Expert groomers for dogs and cats with premium grooming and spa treatments."
-          address="Shop No. 5, Sector 17, Vashi, Navi Mumbai, Maharashtra 400703"
+          address="Shop no 8, Mahavir Milan, Plot no 1, near Blue Diamond Hotel, CHS, Sector 28, Vashi, Navi Mumbai, Mumbai, Maharashtra 400703"
           phone="+919876543210"
           email="hello@freshandfurry.com"
           website="https://freshandfurry.com"

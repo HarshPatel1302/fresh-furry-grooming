@@ -28,12 +28,6 @@ const values = [
   }
 ];
 
-const stats = [
-  { number: "500+", label: "Happy Customers" },
-  { number: "1000+", label: "Pets Groomed" },
-  { number: "4.9/5", label: "Average Rating" },
-  { number: "3", label: "Years in Business" }
-];
 
 export function AboutPageContent() {
   return (
@@ -54,27 +48,9 @@ export function AboutPageContent() {
             
             <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 px-4">
               Founded with a passion for pets and a commitment to excellence, Fresh & Furry has been 
-              providing professional grooming services in Vashi since 2021. We believe every pet 
+              providing professional grooming services in Vashi. We believe every pet 
               deserves to look and feel their absolute best.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-green-600 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-sm sm:text-base text-gray-600">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -85,7 +61,7 @@ export function AboutPageContent() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                Our Mission
+                Vaibhavi Desai
               </h2>
               <p className="text-lg text-gray-700 mb-6">
                 At Fresh & Furry, our mission is simple: to provide exceptional pet grooming services 
@@ -117,8 +93,58 @@ export function AboutPageContent() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-green-100 to-blue-100">
                 <Image
-                  src="/placeholders/staff-priya.svg"
+                  src="/IMG-20251012-WA0008.jpg"
                   alt="Our grooming facility"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Vision */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+                Jyoti Iyer
+              </h2>
+              <p className="text-lg text-gray-700 mb-6">
+                We envision a future where every pet receives the highest quality grooming care in a safe, 
+                comfortable, and loving environment. Our goal is to set the standard for ethical pet grooming 
+                practices in our community and beyond.
+              </p>
+              <p className="text-lg text-gray-700 mb-8">
+                Through continuous innovation, education, and compassionate service, we aim to strengthen 
+                the bond between pets and their families while ensuring every furry friend looks and feels their absolute best.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-gray-700">Expanding our services to reach more pet families</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-gray-700">Training the next generation of professional groomers</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-gray-700">Advancing pet grooming industry standards</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-gray-700">Creating a community hub for pet lovers</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-green-100">
+                <Image
+                  src="/IMG-20251012-WA0003.jpg"
+                  alt="Our vision for pet care"
                   fill
                   className="object-cover"
                 />

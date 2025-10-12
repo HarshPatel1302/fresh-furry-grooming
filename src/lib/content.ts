@@ -107,7 +107,7 @@ function getDefaultSiteConfig(): SiteConfig {
     branches: {
       vashi: {
         name: "Fresh & Furry Pet Grooming - Vashi",
-        address: "Shop No. 5, Sector 17, Vashi, Navi Mumbai - 400703",
+        address: "Shop no 8, Mahavir Milan, Plot no 1, near Blue Diamond Hotel, CHS, Sector 28, Vashi, Navi Mumbai, Mumbai, Maharashtra 400703",
         phone: "+91 9136474141",
         whatsapp: "+91 9136474141",
         email: "vashi@freshandfurry.com",
@@ -120,7 +120,7 @@ function getDefaultSiteConfig(): SiteConfig {
       },
       nerul: {
         name: "Fresh & Furry Pet Grooming - Nerul",
-        address: "Shop No. 12, Sector 19, Nerul, Navi Mumbai - 400706",
+        address: "Shop no 28, Shreeji Plaza, Nerul East, Sector 25, Nerul, Navi Mumbai, Maharashtra 400706",
         phone: "+91 9876543210",
         whatsapp: "+91 9876543210",
         email: "nerul@freshandfurry.com",

@@ -23,14 +23,14 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             {/* Logo */}
             <div className="mb-8 flex justify-center">
-              <Image
-                src="/logo.svg"
-                alt="Fresh & Furry The Ethical Pet Spa"
-                width={300}
-                height={150}
-                className="h-32 w-auto sm:h-36 md:h-40"
-                priority
-              />
+            <Image
+  src="/fresh&furry.png"  // or .png, .webp, etc.
+  alt="Fresh & Furry The Ethical Pet Spa"
+  width={120}
+  height={60}
+  className="h-24 w-auto"
+  priority
+/>
             </div>
             
             <Badge variant="secondary" className="mb-6 bg-white/20 text-gray-800 border-white/30">
@@ -44,8 +44,9 @@ export default function Home() {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
-              Transform your furry friend with our expert grooming services. 
-              Certified professionals, premium products, and a stress-free experience.
+              Transform your furry friend with the help of our professional groomers.
+              Hygiene, Comfort and Gentle care are our top priorities.
+              We believe every furry friend deserves a stress free grooming experience that leaves them Fresh, Happy and full of Love.  
             </p>
 
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 px-4">

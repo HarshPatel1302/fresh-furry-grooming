@@ -10,9 +10,8 @@ import Image from "next/image";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
-  { name: "Prices", href: "/pricing" },
   { name: "Gallery", href: "/gallery" },
-  { name: "About", href: "/about" },
+  { name: "Meet Our Grooming Team", href: "/about" },
   { name: "Reviews", href: "/reviews" },
 ];
 
@@ -25,14 +24,14 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src="/logo.svg"
-              alt="Fresh & Furry The Ethical Pet Spa"
-              width={120}
-              height={60}
-              className="h-8 w-auto"
-              priority
-            />
+          <Image
+  src="/fresh&furry.png"  // or .png, .webp, etc.
+  alt="Fresh & Furry The Ethical Pet Spa"
+  width={120}
+  height={60}
+  className="h-12 w-auto"
+  priority
+/>
           </Link>
 
           {/* Right Side - Desktop Navigation & Mobile Menu */}

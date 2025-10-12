@@ -107,18 +107,6 @@ export const faqItemSchema = z.object({
   category: z.string().optional(),
 });
 
-// Pricing Schema
-export const pricingSchema = z.object({
-  id: z.string(),
-  service: z.string(),
-  description: z.string(),
-  price: z.string(),
-  duration: z.string(),
-  category: z.enum(['dog', 'cat']),
-  size: z.enum(['small', 'medium', 'large', 'extra-large']).optional(),
-  breed: z.string().optional(),
-  features: z.array(z.string()),
-});
 
 // Booking Form Schema
 export const bookingFormSchema = z.object({
@@ -160,7 +148,6 @@ export type Testimonial = z.infer<typeof testimonialSchema>;
 export type FeaturedItem = z.infer<typeof featuredItemSchema>;
 export type GalleryItem = z.infer<typeof galleryItemSchema>;
 export type FAQItem = z.infer<typeof faqItemSchema>;
-export type Pricing = z.infer<typeof pricingSchema>;
 export type BookingForm = z.infer<typeof bookingFormSchema>;
 export type ContactForm = z.infer<typeof contactFormSchema>;
 export type Newsletter = z.infer<typeof newsletterSchema>;

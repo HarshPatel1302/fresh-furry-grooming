@@ -19,8 +19,8 @@ const features = [
   },
   {
     icon: DollarSign,
-    title: "Transparent Pricing",
-    description: "No hidden fees or surprise charges. We provide clear pricing upfront and detailed service descriptions for every treatment."
+    title: "Affordable Services",
+    description: "Quality pet grooming services at competitive rates. We believe every pet deserves professional care without breaking the bank."
   }
 ];
 
