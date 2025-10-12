@@ -96,7 +96,7 @@ export function Footer() {
             <h3 className="font-semibold">Contact Info</h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
-                <MapPin className="h-4 w-4 mt-0.5 text-muted-foreground" />
+                <MapPin className="h-15 w-15 mt-0.5 text-muted-foreground" />
                 <p className="text-sm text-muted-foreground">
                   {primaryBranch.address}
                 </p>

@@ -58,7 +58,6 @@ export const LocalBusinessJSONLD: FC<LocalBusinessProps> = ({
       longitude,
     },
     sameAs: [
-      'https://www.facebook.com/freshandfurry',
       'https://www.instagram.com/freshandfurry',
     ],
     aggregateRating: {

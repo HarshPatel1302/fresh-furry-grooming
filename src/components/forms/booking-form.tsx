@@ -85,10 +85,9 @@ export function BookingForm() {
   ];
 
   const timeSlots = [
-    "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
-    "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM",
-    "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM",
-    "6:00 PM", "6:30 PM"
+    "11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", 
+    "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", 
+    "5:00 PM", "5:30 PM", "6:00 PM", "6:30 PM", "7:00 PM"
   ];
 
   return (
@@ -149,10 +148,9 @@ export function BookingForm() {
                 required
               >
                 <option value="">Select size</option>
-                <option value="small">Small (Under 25 lbs)</option>
-                <option value="medium">Medium (25-50 lbs)</option>
-                <option value="large">Large (50-100 lbs)</option>
-                <option value="extra-large">Extra Large (100+ lbs)</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
               </select>
             </div>
 

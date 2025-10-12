@@ -5,8 +5,8 @@ export const CONTACT_PHONES = {
 } as const;
 
 export const CONTACT_EMAILS = {
-  vashi: "vashi@freshandfurry.com",
-  nerul: "nerul@freshandfurry.com"
+  vashi: "freshandfurryspa@gmail.com",
+  nerul: "freshandfurryspa@gmail.com"
 } as const;
 
 export const CONTACT_ADDRESSES = {
