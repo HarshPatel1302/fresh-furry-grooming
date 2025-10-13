@@ -1,7 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Dog, Cat, Sparkles, Clock, IndianRupee, PawPrint } from "lucide-react";
+import { Dog, Cat, Clock, IndianRupee, PawPrint } from "lucide-react";
 import Link from "next/link";
 import { getServices } from "@/lib/content";
 

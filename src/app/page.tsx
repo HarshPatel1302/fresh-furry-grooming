@@ -1,14 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { PawPrint, Star, MapPin, Clock, Phone, Mail, CheckCircle } from "lucide-react";
+import { PawPrint, Star, MapPin, Clock, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { getPrimaryBranch } from "@/lib/content";
-import { CONTACT_PHONES } from "@/lib/contact";
 
 export default function Home() {
-  const primaryBranch = getPrimaryBranch();
 
   return (
     <div className="min-h-screen">

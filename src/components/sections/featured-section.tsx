@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Play, Image as ImageIcon, Calendar } from "lucide-react";
+import { Image as ImageIcon, Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { getFeatured } from "@/lib/content";

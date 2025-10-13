@@ -2,11 +2,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Phone, Mail, Navigation, Car } from "lucide-react";
-import { getSiteConfig, getPrimaryBranch } from "@/lib/content";
+import { getPrimaryBranch } from "@/lib/content";
 import { env } from "@/lib/env";
 
 export function LocationSection() {
-  const siteConfig = getSiteConfig();
   const primaryBranch = getPrimaryBranch();
 
   return (

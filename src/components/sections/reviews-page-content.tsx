@@ -4,8 +4,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Star, Quote, ThumbsUp, MessageCircle, Calendar, Filter, Instagram } from "lucide-react";
+import { Star, Quote, ThumbsUp, MessageCircle, Calendar, Instagram } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 

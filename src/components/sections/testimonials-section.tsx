@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 import { getTestimonials } from "@/lib/content";
 
@@ -32,18 +31,6 @@ export function TestimonialsSection() {
     ));
   };
 
-  const getSourceBadge = (source: string) => {
-    switch (source) {
-      case "google":
-        return <Badge variant="secondary">Google</Badge>;
-      case "facebook":
-        return <Badge variant="secondary">Facebook</Badge>;
-      case "instagram":
-        return <Badge variant="secondary">Instagram</Badge>;
-      default:
-        return <Badge variant="outline">Direct</Badge>;
-    }
-  };
 
   if (testimonials.length === 0) {
     return (
