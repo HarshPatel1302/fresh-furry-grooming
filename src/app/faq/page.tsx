@@ -23,7 +23,7 @@ export default function FAQPage() {
     },
     {
       question: "How much does grooming cost?",
-      answer: "Our pricing varies based on your pet's size, breed, coat condition, and the services requested. Basic grooming starts at ₹800 for small dogs and ₹600 for cats. Please check our pricing page or call us for a personalized quote."
+      answer: "Our pricing varies based on your pet's size, breed, coat condition, and the services requested. Only Bath starts at ₹1000 for small dogs and cats, while Full Grooming packages start at ₹2400 for small dogs. Please check our services page or call us for a personalized quote."
     }
   ];
 

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { PawPrint, Star, MapPin, Clock, CheckCircle } from "lucide-react";
+import { PawPrint, Star, MapPin, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -96,34 +96,30 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <PawPrint className="h-5 w-5 text-blue-600" />
-                  Bath & Blow Dry
+                  Only Bath
                 </CardTitle>
                 <CardDescription>
-                  Complete bath with premium shampoo, conditioner, and professional blow dry
+                  Complete bath with premium shampoo, conditioner and blow dry.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 mb-4">
                   <li className="flex items-center gap-2 text-sm text-gray-600">
                     <CheckCircle className="h-4 w-4 text-green-600" />
-                    Premium pet-safe shampoo & conditioner
+                    Premium pet-safe shampoo
+                  </li>
+                  <li className="flex items-center gap-2 text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Conditioner
                   </li>
                   <li className="flex items-center gap-2 text-sm text-gray-600">
                     <CheckCircle className="h-4 w-4 text-green-600" />
                     Professional blow dry with brush-out
                   </li>
-                  <li className="flex items-center gap-2 text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    Ear cleaning included
-                  </li>
                 </ul>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2 text-sm text-gray-500">
-                    <Clock className="h-4 w-4" />
-                    60-90 minutes
-                  </div>
                   <div className="text-lg font-bold text-green-600">
-                    From ₹800
+From ₹1000-₹1200
                   </div>
                 </div>
                 <Button asChild className="w-full touch-manipulation min-h-[44px]">
@@ -136,17 +132,17 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <PawPrint className="h-5 w-5 text-purple-600" />
-                  Full Groom
+                  Full Grooming
                 </CardTitle>
                 <CardDescription>
-                  Complete grooming package including bath, haircut, styling, and finishing touches
+                  Complete grooming package including bath, haircut, nail trimming and styling for the perfect look.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 mb-4">
                   <li className="flex items-center gap-2 text-sm text-gray-600">
                     <CheckCircle className="h-4 w-4 text-green-600" />
-                    Bath & blow dry
+                    Bath, conditioner & blow dry
                   </li>
                   <li className="flex items-center gap-2 text-sm text-gray-600">
                     <CheckCircle className="h-4 w-4 text-green-600" />
@@ -156,14 +152,22 @@ export default function Home() {
                     <CheckCircle className="h-4 w-4 text-green-600" />
                     Nail trimming & filing
                   </li>
+                  <li className="flex items-center gap-2 text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Ear cleaning
+                  </li>
+                  <li className="flex items-center gap-2 text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Teeth brushing
+                  </li>
+                  <li className="flex items-center gap-2 text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Sanitary trim
+                  </li>
                 </ul>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2 text-sm text-gray-500">
-                    <Clock className="h-4 w-4" />
-                    2-3 hours
-                  </div>
                   <div className="text-lg font-bold text-green-600">
-                    From ₹1500
+From ₹2200-₹2600
                   </div>
                 </div>
                 <Button asChild className="w-full touch-manipulation min-h-[44px]">
@@ -176,34 +180,50 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <PawPrint className="h-5 w-5 text-green-600" />
-                  Spa Package
+                  Ayurvedic Spa
                 </CardTitle>
                 <CardDescription>
-                  Luxury spa experience with premium treatments for ultimate pampering
+                  Luxury premium Ayurvedic spa with Ayurvediv mud pack and relaxing massage for ultimate pampering.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 mb-4">
                   <li className="flex items-center gap-2 text-sm text-gray-600">
                     <CheckCircle className="h-4 w-4 text-green-600" />
-                    Full groom or bath
+                    Ayurvedic mud pack
                   </li>
                   <li className="flex items-center gap-2 text-sm text-gray-600">
                     <CheckCircle className="h-4 w-4 text-green-600" />
-                    Aromatherapy treatment
+                    Relaxing massage
           </li>
                   <li className="flex items-center gap-2 text-sm text-gray-600">
                     <CheckCircle className="h-4 w-4 text-green-600" />
-                    Blueberry facial
+                    Ayurvedic shampoo
+          </li>
+          <li className="flex items-center gap-2 text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Blow dry
+          </li>
+          <li className="flex items-center gap-2 text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Ear cleaning
+          </li>
+          <li className="flex items-center gap-2 text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Nail trimming / filing
+          </li>
+          <li className="flex items-center gap-2 text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Teeth brushing
+          </li>
+          <li className="flex items-center gap-2 text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Sanitary clipping
           </li>
                 </ul>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2 text-sm text-gray-500">
-                    <Clock className="h-4 w-4" />
-                    3-4 hours
-                  </div>
                   <div className="text-lg font-bold text-green-600">
-                    From ₹2500
+From ₹1500-₹1600
                   </div>
                 </div>
                 <Button asChild className="w-full touch-manipulation min-h-[44px]">

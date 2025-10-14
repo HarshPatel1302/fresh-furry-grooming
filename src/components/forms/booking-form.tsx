@@ -68,20 +68,20 @@ export function BookingForm() {
   };
 
   const services = [
-    "Basic Bath & Blow Dry",
-    "Full Grooming Package", 
-    "Luxury Spa Treatment",
-    "Deshedding Treatment",
-    "Nail Care & Pedicure",
-    "Senior Dog Special Care",
-    "Cat Bath & Dry",
-    "Complete Cat Grooming",
-    "Long-Hair Cat Special",
-    "Cat Nail Trimming",
-    "Cat Spa Experience",
-    "Anxious Cat Care",
-    "Health Check Service",
-    "Flea & Tick Treatment"
+    "Only Bath - Small Dogs",
+    "Only Bath - Medium/Large Dogs",
+    "Only Bath - Cats",
+    "Bath + Extras - Small Dogs",
+    "Bath + Extras - Medium/Large Dogs", 
+    "Bath + Extras - Cats",
+    "Full Grooming - Small Dogs",
+    "Full Grooming - Medium/Large Dogs",
+    "Full Grooming - Cats",
+    "Ayurvedic Spa - Small Dogs",
+    "Ayurvedic Spa - Medium/Large Dogs",
+    "Full Body Haircut",
+    "Nail Trimming / Filing / Ear Cleaning",
+    "Sanitary Clipping"
   ];
 
   const timeSlots = [
@@ -149,7 +149,7 @@ export function BookingForm() {
               >
                 <option value="">Select size</option>
                 <option value="small">Small</option>
-                <option value="medium">Medium</option>
+                <option value="medium-large">Medium</option>
                 <option value="large">Large</option>
               </select>
             </div>
