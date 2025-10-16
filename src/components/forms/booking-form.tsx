@@ -37,13 +37,22 @@ export function BookingForm() {
     setSubmitStatus('idle');
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Send data to API
+      const response = await fetch('/api/booking', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
       
-      // Here you would typically send the data to your API
-      console.log('Booking data:', formData);
-      
-      setSubmitStatus('success');
+      if (result.success) {
+        setSubmitStatus('success');
+      } else {
+        setSubmitStatus('error');
+      }
       // Reset form
       setFormData({
         petName: "",

@@ -64,31 +64,11 @@ export function AboutPageContent() {
                 Vaibhavi Desai
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                At Fresh & Furry, our mission is simple: to provide exceptional pet grooming services 
-                that prioritize the health, comfort, and happiness of every pet that walks through our doors.
+              Hi, I’m Vaibhavi a professional pet groomer and the owner of Fresh and Furry Pet Salon. Growing up, I was always surrounded by pets and their unconditional love. Though I graduated in fashion designing and started my career there, I soon realized my heart belonged somewhere else — with animals.
               </p>
               <p className="text-lg text-gray-700 mb-8">
-                We believe that grooming is more than just making pets look good – it's about their 
-                overall well-being, hygiene, and the special bond between pets and their families.
+              I wanted to do something that truly made me happy, and that's how my grooming journey began. Over time, I developed a special love for cat grooming, all thanks to my cat, Pillu. He taught me everything about understanding and caring for cats, and even though he's no longer with me, a part of him lives on in every cat I groom. For me, grooming isn't just about looks — it's about comfort, care, and love. Every pet deserves to be treated with kindness and affection, and that's the heart behind everything I do at Fresh and Furry The Ethical Pet Spa.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-700">Using only premium, pet-safe products</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-700">Maintaining the highest hygiene standards</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-700">Providing stress-free grooming experiences</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-700">Building lasting relationships with pet families</p>
-                </div>
-              </div>
             </div>
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-green-100 to-blue-100">
@@ -113,32 +93,11 @@ export function AboutPageContent() {
                 Jyoti Iyer
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                We envision a future where every pet receives the highest quality grooming care in a safe, 
-                comfortable, and loving environment. Our goal is to set the standard for ethical pet grooming 
-                practices in our community and beyond.
+              I’m Jyoti, the founder of Fresh and Furry. I originally worked in the IT sector, but after getting my dog, Bunny, I realized my true passion was with pets. I wanted to give Bunny the best care possible, so I decided to learn professional grooming. I earned my certification in Bangalore and learned everything I needed to care for him.
               </p>
               <p className="text-lg text-gray-700 mb-8">
-                Through continuous innovation, education, and compassionate service, we aim to strengthen 
-                the bond between pets and their families while ensuring every furry friend looks and feels their absolute best.
+              Following my heart, I started Fresh and Furry, and over the past 9 years, I’ve groomed countless pets. Every day I get to work with animals I love is a blessing, and I genuinely enjoy every moment of grooming. For me, it’s not just about making pets look good — it’s about making them feel comfortable, cared for, and happy. Seeing a pet relaxed, happy, and safe in my hands is the greatest reward, and it motivates me to give my very best in everything I do.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-700">Expanding our services to reach more pet families</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-700">Training the next generation of professional groomers</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-700">Advancing pet grooming industry standards</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-700">Creating a community hub for pet lovers</p>
-                </div>
-              </div>
             </div>
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-green-100">
@@ -159,11 +118,10 @@ export function AboutPageContent() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Our Values
+              Our Vision
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              These core values guide everything we do at Fresh & Furry, from how we care for your pets 
-              to how we interact with you as our valued customers.
+            Our vision is to create a place where every pet owner feels completely confident leaving their beloved fur babies in caring, loving, and professional hands. We aim to provide more than just grooming — we want every pet to experience comfort, affection, and genuine care, making every visit a happy and stress-free experience for both pets and their owners.
             </p>
           </div>
 

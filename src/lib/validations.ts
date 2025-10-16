@@ -115,7 +115,7 @@ export const bookingFormSchema = z.object({
     message: "Please select pet type",
   }),
   breed: z.string().min(1, "Breed is required"),
-  size: z.enum(['small', 'medium', 'large', 'extra-large']),
+  size: z.enum(['small', 'medium-large', 'large']),
   age: z.string().min(1, "Age is required"),
   service: z.string().min(1, "Service is required"),
   preferredDate: z.string().min(1, "Preferred date is required"),

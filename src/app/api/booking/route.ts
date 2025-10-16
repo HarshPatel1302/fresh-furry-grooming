@@ -47,8 +47,8 @@ export async function POST(request: NextRequest) {
     if (env.RESEND_API_KEY) {
       try {
         const emailPayload = {
-          from: "Fresh & Furry <hello@freshandfurry.com>",
-          to: ["hello@freshandfurry.com"],
+          from: "Fresh & Furry <onboarding@resend.dev>",
+          to: ["harshnitin882.hn@gmail.com"], // Replace with your actual Gmail address
           subject: `New Booking Request from ${validatedData.ownerName}`,
           html: `
             <h2>New Booking Request</h2>
