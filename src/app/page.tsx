@@ -37,7 +37,6 @@ export default function Home() {
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
               Professional Pet Grooming
-              <span className="block text-green-600">Made Simple</span>
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
