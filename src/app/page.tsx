@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <div className="min-h-screen">
 
-                  {/* Hero Section */}
-                  <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 to-green-50 touch-pan-x touch-pan-y">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 to-green-50">
         <div className="absolute inset-0 z-0">
           <div className="w-full h-full bg-gradient-to-br from-blue-100/50 to-green-100/50" />
         </div>
@@ -20,14 +20,14 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             {/* Logo */}
             <div className="mb-8 flex justify-center">
-            <Image
-  src="/fresh&furry.png"  // or .png, .webp, etc.
-  alt="Fresh & Furry The Ethical Pet Spa"
-  width={120}
-  height={60}
-  className="h-24 w-auto"
-  priority
-/>
+              <Image
+                src="/fresh&furry.png"
+                alt="Fresh & Furry The Ethical Pet Spa"
+                width={120}
+                height={60}
+                className="h-24 w-auto"
+                priority
+              />
             </div>
             
             <Badge variant="secondary" className="mb-6 bg-white/20 text-gray-800 border-white/30">
@@ -41,24 +41,22 @@ export default function Home() {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
-              Transform your furry friend with the help of our professional groomers.
-              Hygiene, Comfort and Gentle care are our top priorities.
-              We believe every furry friend deserves a stress free grooming experience that leaves them Fresh, Happy and full of Love.  
+              We built Fresh and Furry with one goal — to provide pets with a clean, safe, and stress-free grooming experience filled with love and comfort. Every service we offer is designed keeping your pet's hygiene, safety, and happiness in mind, because we truly believe they deserve nothing but the best.
             </p>
 
-                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 px-4">
-                          <Button asChild size="lg" className="w-full sm:w-auto min-w-[200px] bg-green-600 hover:bg-green-700 text-white font-semibold touch-manipulation min-h-[48px]">
-                            <Link href="/contact" className="flex items-center justify-center gap-2">
-                              <PawPrint className="h-4 w-4" />
-                              Book Appointment
-                            </Link>
-                          </Button>
-                          <Button asChild variant="outline" size="lg" className="w-full sm:w-auto min-w-[200px] border-gray-300 text-gray-700 hover:bg-white/80 touch-manipulation min-h-[48px]">
-                            <Link href="/services">
-                              View Services
-                            </Link>
-                          </Button>
-                        </div>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 px-4">
+              <Button asChild size="lg" className="w-full sm:w-auto min-w-[200px] bg-green-600 hover:bg-green-700 text-white font-semibold touch-manipulation min-h-[48px]">
+                <Link href="/contact" className="flex items-center justify-center gap-2">
+                  <PawPrint className="h-4 w-4" />
+                  Book Appointment
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto min-w-[200px] border-gray-300 text-gray-700 hover:bg-white/80 touch-manipulation min-h-[48px]">
+                <Link href="/services">
+                  View Services
+                </Link>
+              </Button>
+            </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-gray-600 px-4">
               <div className="flex items-center gap-2 text-xs sm:text-sm">
@@ -78,8 +76,8 @@ export default function Home() {
         </div>
       </section>
 
-                  {/* Services Section */}
-                  <section className="py-12 sm:py-16 bg-white touch-pan-x touch-pan-y">
+      {/* Services Section */}
+      <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
@@ -119,7 +117,7 @@ export default function Home() {
                 </ul>
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-lg font-bold text-green-600">
-From ₹1000-₹1200
+                    From ₹1000
                   </div>
                 </div>
                 <Button asChild className="w-full touch-manipulation min-h-[44px]">
@@ -167,7 +165,7 @@ From ₹1000-₹1200
                 </ul>
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-lg font-bold text-green-600">
-From ₹2200-₹2600
+                    From ₹2200
                   </div>
                 </div>
                 <Button asChild className="w-full touch-manipulation min-h-[44px]">
@@ -183,7 +181,7 @@ From ₹2200-₹2600
                   Ayurvedic Spa
                 </CardTitle>
                 <CardDescription>
-                  Luxury premium Ayurvedic spa with Ayurvediv mud pack and relaxing massage for ultimate pampering.
+                  Luxury premium Ayurvedic spa with Ayurvedic mud pack and relaxing massage for ultimate pampering.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -223,7 +221,7 @@ From ₹2200-₹2600
                 </ul>
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-lg font-bold text-green-600">
-From ₹1500-₹1600
+                    From ₹1500
                   </div>
                 </div>
                 <Button asChild className="w-full touch-manipulation min-h-[44px]">

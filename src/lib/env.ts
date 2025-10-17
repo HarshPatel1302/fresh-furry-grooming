@@ -8,11 +8,6 @@ const envSchema = z.object({
   NEXT_PUBLIC_GOOGLE_MAPS_EMBED_URL: z.string().optional(),
   WHATSAPP_NUMBER: z.string().regex(/^\+91[6-9]\d{9}$/).optional(),
   
-  // Cloudinary
-  CLOUDINARY_CLOUD_NAME: z.string().optional(),
-  CLOUDINARY_API_KEY: z.string().optional(),
-  CLOUDINARY_API_SECRET: z.string().optional(),
-  
   // Integrations
   N8N_WEBHOOK_URL: z.string().url().optional(),
   RESEND_API_KEY: z.string().optional(),

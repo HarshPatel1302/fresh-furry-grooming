@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import { MapPin, Clock, Phone, Mail, Instagram } from "lucide-react";
-import { getSiteConfig, getPrimaryBranch } from "@/lib/content";
-import { CONTACT_PHONES } from "@/lib/contact";
+import { getSiteConfig, getPrimaryBranch, getAllBranches } from "@/lib/content";
 import Image from "next/image";
 
 export function Footer() {
   const siteConfig = getSiteConfig();
   const primaryBranch = getPrimaryBranch();
+  const allBranches = getAllBranches();
 
   const quickLinks = [
     { name: "Services", href: "/services" },
@@ -31,14 +31,14 @@ export function Footer() {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-            <Image
-  src="/fresh&furry.png"  // or .png, .webp, etc.
-  alt="Fresh & Furry The Ethical Pet Spa"
-  width={120}
-  height={60}
-  className="h-16 w-auto"
-  priority
-/>
+              <Image
+                src="/fresh&furry.png"
+                alt="Fresh & Furry The Ethical Pet Spa"
+                width={120}
+                height={60}
+                className="h-16 w-auto"
+                priority
+              />
             </div>
             <p className="text-sm text-muted-foreground">
               Professional pet grooming and spa services in Vashi & Nerul. Making your furry friends look and feel their best.
@@ -114,22 +114,16 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <Phone className="h-4 w-4 mt-0.5 text-muted-foreground" />
                 <div className="text-sm text-muted-foreground space-y-1">
-                  <div>
-                    Vashi: <a
-                      href={`tel:${CONTACT_PHONES.vashi}`}
-                      className="hover:text-foreground transition-colors"
-                    >
-                      {CONTACT_PHONES.vashi}
-                    </a>
-                  </div>
-                  <div>
-                    Nerul: <a
-                      href={`tel:${CONTACT_PHONES.nerul}`}
-                      className="hover:text-foreground transition-colors"
-                    >
-                      {CONTACT_PHONES.nerul}
-                    </a>
-                  </div>
+                  {allBranches.map((branch) => (
+                    <div key={branch.name}>
+                      {branch.name.includes('Vashi') ? 'Vashi' : 'Nerul'}: <a
+                        href={`tel:${branch.phone}`}
+                        className="hover:text-foreground transition-colors"
+                      >
+                        {branch.phone}
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className="flex items-center space-x-3">
