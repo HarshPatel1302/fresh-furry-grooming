@@ -46,6 +46,7 @@ export async function POST(request: NextRequest) {
     // Optional: Send email notification via Resend
     if (env.RESEND_API_KEY) {
       try {
+        console.log("Attempting to send email notification...");
         const emailPayload = {
           from: "Fresh & Furry <onboarding@resend.dev>",
           to: ["harshnitin882.hn@gmail.com"], // Replace with your actual Gmail address
@@ -64,7 +65,7 @@ export async function POST(request: NextRequest) {
           `,
         };
 
-        await fetch("https://api.resend.com/emails", {
+        const emailResponse = await fetch("https://api.resend.com/emails", {
           method: "POST",
           headers: {
             "Authorization": `Bearer ${env.RESEND_API_KEY}`,
@@ -72,10 +73,19 @@ export async function POST(request: NextRequest) {
           },
           body: JSON.stringify(emailPayload),
         });
+
+        if (emailResponse.ok) {
+          console.log("Email sent successfully");
+        } else {
+          const errorText = await emailResponse.text();
+          console.error("Email sending failed:", emailResponse.status, errorText);
+        }
       } catch (emailError) {
         console.error("Email notification error:", emailError);
         // Don't fail the request if email fails, just log it
       }
+    } else {
+      console.log("RESEND_API_KEY not configured - skipping email notification");
     }
 
     return NextResponse.json(
