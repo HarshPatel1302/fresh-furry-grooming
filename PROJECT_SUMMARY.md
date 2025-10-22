@@ -215,7 +215,7 @@ npm run start
 ## 📞 **Support**
 
 For any questions or issues:
-- **Email**: hello@freshandfurry.com
+- **Email**: freshandfurrypetspa@gmail.com
 - **Phone**: +91-98765-43210
 - **Location**: Vashi, Navi Mumbai
 

@@ -234,7 +234,7 @@ The website is optimized for performance:
 
 For support or questions:
 
-- **Email**: hello@freshandfurry.com
+- **Email**: freshandfurrypetspa@gmail.com
 - **Phone**: +91-98765-43210
 - **WhatsApp**: +91-98765-43210
 

@@ -56,7 +56,7 @@ export default function RootLayout({
           description="Professional pet grooming services in Vashi, Navi Mumbai. Expert groomers for dogs and cats with premium grooming and spa treatments."
           address="Shop no 8, Mahavir Milan, Plot no 1, near Blue Diamond Hotel, CHS, Sector 28, Vashi, Navi Mumbai, Mumbai, Maharashtra 400703"
           phone="+919876543210"
-          email="hello@freshandfurry.com"
+          email="freshandfurrypetspa@gmail.com"
           website="https://freshandfurry.com"
           openingHours={[
             "Monday-Friday: 9:00 AM - 7:00 PM",

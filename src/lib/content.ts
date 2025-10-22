@@ -110,7 +110,7 @@ function getDefaultSiteConfig(): SiteConfig {
         address: "Shop no 8, Mahavir Milan, Plot no 1, near Blue Diamond Hotel, CHS, Sector 28, Vashi, Navi Mumbai, Mumbai, Maharashtra 400703",
         phone: "+91 9136474141",
         whatsapp: "+91 9136474141",
-        email: "freshandfurryspa@gmail.com",
+        email: "freshandfurrypetspa@gmail.com",
         hours: {
           "Monday": "Closed",
           "Tuesday - Sunday": "11:00 AM - 7:00 PM"
@@ -123,7 +123,7 @@ function getDefaultSiteConfig(): SiteConfig {
         address: "Shop no 28, Shreeji Plaza, Nerul East, Sector 25, Nerul, Navi Mumbai, Maharashtra 400706",
         phone: "+91 9876543210",
         whatsapp: "+91 9876543210",
-        email: "freshandfurryspa@gmail.com",
+        email: "freshandfurrypetspa@gmail.com",
         hours: {
           "Monday": "Closed",
           "Tuesday - Sunday": "11:00 AM - 7:00 PM"

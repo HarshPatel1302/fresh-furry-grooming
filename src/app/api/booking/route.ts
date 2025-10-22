@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
         console.log("Attempting to send email notification...");
         const emailPayload = {
           from: "Fresh & Furry <onboarding@resend.dev>",
-          to: ["harshnitin882.hn@gmail.com"], // Replace with your actual Gmail address
+          to: ["freshandfurrypetspa@gmail.com"], // Booking notifications email
           subject: `New Booking Request from ${validatedData.ownerName}`,
           html: `
             <h2>New Booking Request</h2>

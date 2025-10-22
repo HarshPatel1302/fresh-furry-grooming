@@ -126,8 +126,8 @@ export function Footer() {
                   ))}
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-muted-foreground" />
+              <div className="flex items-start space-x-3">
+                <Mail className="h-4 w-4 mt-0.5 text-muted-foreground" />
                 <a
                   href={`mailto:${primaryBranch.email}`}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
