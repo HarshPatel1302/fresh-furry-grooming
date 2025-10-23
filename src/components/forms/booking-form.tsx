@@ -28,6 +28,17 @@ export function BookingForm() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (field: string, value: string) => {
+    // Check if the selected date is a Monday
+    if (field === 'preferredDate' && value) {
+      const selectedDate = new Date(value);
+      const dayOfWeek = selectedDate.getDay(); // 0 = Sunday, 1 = Monday, etc.
+      
+      if (dayOfWeek === 1) { // Monday
+        alert('Sorry, we are closed on Mondays. Please select a different date.');
+        return; // Don't update the form data
+      }
+    }
+    
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
@@ -52,6 +63,10 @@ export function BookingForm() {
         setSubmitStatus('success');
       } else {
         setSubmitStatus('error');
+        // Show specific error message if provided
+        if (result.error) {
+          alert(result.error);
+        }
       }
       // Reset form
       setFormData({
@@ -214,6 +229,7 @@ export function BookingForm() {
                 min={new Date().toISOString().split('T')[0]}
                 required
               />
+              <p className="text-xs text-gray-500">Note: We are closed on Mondays</p>
             </div>
 
             <div className="space-y-2">

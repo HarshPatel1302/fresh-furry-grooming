@@ -9,6 +9,20 @@ export async function POST(request: NextRequest) {
     // Validate the form data
     const validatedData = bookingFormSchema.parse(body);
     
+    // Check if the selected date is a Monday
+    const selectedDate = new Date(validatedData.preferredDate);
+    const dayOfWeek = selectedDate.getDay(); // 0 = Sunday, 1 = Monday, etc.
+    
+    if (dayOfWeek === 1) { // Monday
+      return NextResponse.json(
+        { 
+          success: false, 
+          error: "Sorry, we are closed on Mondays. Please select a different date." 
+        },
+        { status: 400 }
+      );
+    }
+    
     // Normalize phone number
     const normalizedPhone = normalizePhoneNumber(validatedData.phone);
     
