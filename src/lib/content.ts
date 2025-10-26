@@ -121,8 +121,8 @@ function getDefaultSiteConfig(): SiteConfig {
       nerul: {
         name: "Fresh & Furry Pet Grooming - Nerul",
         address: "Shop no 28, Shreeji Plaza, Nerul East, Sector 25, Nerul, Navi Mumbai, Maharashtra 400706",
-        phone: "+91 9876543210",
-        whatsapp: "+91 9876543210",
+        phone: "+91 7021969130",
+        whatsapp: "+91 7021969130",
         email: "freshandfurrypetspa@gmail.com",
         hours: {
           "Monday": "Closed",
